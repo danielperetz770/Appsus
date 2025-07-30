@@ -108,6 +108,32 @@ function _createDemoNotes() {
             }
         },
         {
+            id: 'n203',
+            createdAt: now + 3,
+            type: 'NoteTodos',
+            isPinned: false,
+            info: {
+                title: 'Weekend checklist',
+                todos: [
+                    { txt: 'Clean the house', doneAt: null },
+                    { txt: 'Build portfolio', doneAt: 1651234567890 }
+                ]
+            }
+        },
+        {
+            id: 'n203',
+            createdAt: now + 3,
+            type: 'NoteTodos',
+            isPinned: false,
+            info: {
+                title: 'Weekend checklist',
+                todos: [
+                    { txt: 'Clean the house', doneAt: null },
+                    { txt: 'Build portfolio', doneAt: 1651234567890 }
+                ]
+            }
+        },
+        {
             id: 'n204',
             createdAt: now + 4,
             type: 'NoteImg',

@@ -25,10 +25,6 @@
   border-bottom: none;
 }
 
-.note-preview {
-  flex-grow: 1;
-}
-
 .notes-list button.close {
   background: transparent;
   border: none;
