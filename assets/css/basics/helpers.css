@@ -29,3 +29,19 @@
 .mail{
     margin-top: 40px;
 }
+
+.bold{
+font-weight: bold;
+}
+
+.not-bold{
+    font-weight: lighter;
+}
+
+.flex.bold{
+    gap: 70px;
+}
+
+.flex.not-bold{
+    gap: 70px;
+}

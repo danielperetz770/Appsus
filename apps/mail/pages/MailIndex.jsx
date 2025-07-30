@@ -5,17 +5,24 @@ const { useState, useEffect } = React
 export function MailIndex() {
 
     const [mails, setMails] = useState([])
+    const [selectedMail, setSelectedMail] = useState(null)
 
 
     useEffect(() => {
         loadMails()
     }, [])
 
+    function onSetSelectedMail(mail) {
+        setSelectedMail(mail)
+    }
+
     function loadMails() {
         mailService.query()
             .then(mails => setMails(mails))
             .catch(err => console.log('failed to load', err))
     }
+
+
 
     if (!mails || !mails.length) return <div>loading...</div>
     return (
@@ -31,12 +38,14 @@ export function MailIndex() {
             <section className="container">Mail app
                 <ul className="mail-list">
                     {mails.map(mail => (
-                        <li key={mail.id} className="mail">
+                        <li key={mail.id}
+                            className={`flex ${mail.isRead ? "not-bold" : "bold"}`}
+                            onClick={() => onSetSelectedMail(mail)}>
                             <p>subject:{mail.subject}</p>
-                            <p>{mail.body}</p>
-                            <p>{mail.isRead}</p>
+                            {/* <p>{mail.body}</p> */}
+                            {/* <p>{mail.isRead}</p> */}
                             <p>from:{mail.from}</p>
-                            <p>time sent:{mail.sentAt}</p>
+                            {/* <p>time sent:{mail.sentAt}</p> */}
                         </li>
                     ))
                     }
