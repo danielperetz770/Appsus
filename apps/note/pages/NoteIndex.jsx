@@ -8,6 +8,8 @@ import { noteService } from '../../note/services/note.service.js'
 
 import { NotePreview } from '../cmps/NotePreview.jsx'
 import { NoteHeader } from '../cmps/NoteHeader.jsx'
+import { NoteAdd } from '../cmps/NoteAdd.jsx'
+import { NoteList } from '../cmps/NoteList.jsx'
 
 
 
@@ -37,14 +39,23 @@ export function NoteIndex() {
     }
 
 
-    
+    function handleRemoveNote(noteId) {
+        setNotes(prevNotes => prevNotes.filter(note => note.id !== noteId))
+    }
+    <NoteList notes={notes} onRemove={handleRemoveNote} />
+
     const filteredNotes = notes.filter(note =>
         note.info && note.info.title && note.info.title.toLowerCase().includes(searchTerm.toLowerCase())
     )
 
+    function onAddNote(newNote) {
+        noteService.save(newNote)
+            .then(savedNote => {
+                setNotes(prevNotes => [savedNote, ...prevNotes])
+            })
+            .catch(err => console.error('Failed to add note', err))
+    }
 
-
-    console.log('test')
 
     return (
         <section className="note-index">
@@ -54,17 +65,16 @@ export function NoteIndex() {
                 onReload={loadNotes}
             />
 
+            <NoteAdd onAddNote={onAddNote} />
+
             {isLoading ? (
                 <div className="loading">Loading notes...</div>
             ) : !filteredNotes.length ? (
                 <div className="no-notes">No notes to show.</div>
             ) : (
-                <div className="notes-container">
-                    {filteredNotes.map(note => (
-                        <NotePreview key={note.id} note={note} />
-                    ))}
-                </div>
+                <NoteList notes={filteredNotes} onRemove={handleRemoveNote} />
             )}
         </section>
     )
+
 }
