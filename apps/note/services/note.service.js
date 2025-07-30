@@ -14,6 +14,7 @@ export const noteService = {
     getDefaultFilter
 }
 
+
 function query(filterBy = {}) {
     return storageService.query(NOTE_KEY)
         .then(notes => {
@@ -46,8 +47,15 @@ function save(note) {
 }
 
 function getEmptyNote() {
-    return { id, title }
+    return {
+        id: utilService.makeId(),
+        type: 'NoteTxt',
+        isPinned: false,
+        info: { title: '', txt: '' },
+        style: { backgroundColor: '#fff' }
+    }
 }
+
 
 function getDefaultFilter() {
     return { txt: '', minPrice: 0, maxPrice: Infinity }
