@@ -1,12 +1,13 @@
 
 // import { AppHeader } from "../../../cmps/AppHeader.jsx";
+const { useState, useEffect } = React
 
-export function MailPreview({ mail, onSetSelectedMail, selectedMail,key }) {
+export function MailPreview({ mail, onSetSelectedMail, selectedMail }) {
 
-
+    console.log('hi')
     return (
         <React.Fragment>
-            <li key={key}
+            <li
                 className={`flex ${mail.isRead ? "not-bold" : "bold"}`}
                 onClick={() => onSetSelectedMail(mail)}>
                 <p>{mail.subject}</p>
