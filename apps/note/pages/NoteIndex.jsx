@@ -1,8 +1,14 @@
+const { useState, useEffect } = React
+// const { useSearchParams } = ReactRouterDOM
+
+
+
 import { noteService } from '../../note/services/note.service.js'
+// import { makeId } from '../../../services/util.service.js'
+
 import { NotePreview } from '../cmps/NotePreview.jsx'
 import { NoteHeader } from '../cmps/NoteHeader.jsx'
 
-const { useState, useEffect } = React
 
 
 
@@ -30,6 +36,8 @@ export function NoteIndex() {
             .finally(() => setIsLoading(false))
     }
 
+
+    
     const filteredNotes = notes.filter(note =>
         note.info && note.info.title && note.info.title.toLowerCase().includes(searchTerm.toLowerCase())
     )

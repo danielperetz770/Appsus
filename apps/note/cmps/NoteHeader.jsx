@@ -3,7 +3,7 @@
 export function NoteHeader({ searchTerm, setSearchTerm, onReload }) {
     return (
         <header className="note-header">
-            <h2>Notes List</h2>
+            <img className="logo" src="icon/keep-assets/asset 0.png" alt="icon" />
             <div className="note-controls">
                 <input
                     type="text"

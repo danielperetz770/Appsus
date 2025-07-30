@@ -4,13 +4,37 @@
 @import './basics/helpers.css';
 @import './basics/layout.css';
 
-/*COMPONENTS */
+
+/* Setup */
+@import 'setup/vars.css';
+@import 'setup/typography.css';
+
+
+/* Base */
+@import 'basics/base.css';
+@import './basics/helpers.css';
+@import './basics/layout.css';
+
+/* MEDIA QUERIES */
+@import 'setup/mq.css';
+
+
+/* === Components === */
+
+/* App-Cmps */
 @import './cmps/Home.css';
 @import './cmps/UserMsg.css';
 @import './cmps/AppHeader.css';
 
 
-/*NOTE*/
+
+/* Pages */
+
+
+
+
+/* Notes Cmps */
+@import './apps/note/note-cmps/NoteHeader.css';
 @import './apps/note/NoteIndex.css';
 @import './apps/note/NotePrevie.css';
 @import './apps/note/NoteList.css';

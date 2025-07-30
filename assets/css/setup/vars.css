@@ -1,0 +1,40 @@
+:root {
+    /* ============ PALETTE COLORS ============ */
+
+    /* === Main Colors === */
+    /* blue */
+    --clr-blue-base: #4285F4;
+    --clr-blue-l: #8AB4F8;
+    --clr-blue-d: #1967D2;
+
+    /* red */
+    --clr-red-base: #EA4335;
+    --clr-red-l: #F28B82;
+    --clr-red-d: #C5221F;
+
+    /* yellow */
+    --clr-yellow-base: #FBBC05;
+    --clr-yellow-l: #FDD663;
+    --clr-yellow-d: #F9AB00;
+
+    /* green */
+    --clr-green-base: #34A853;
+    --clr-green-l: #81C995;
+    --clr-green-d: #0F9D58;
+
+    /* === Grays === */
+    --clr-white: #ffffff;
+    --clr-gray-100: #F1F3F4;
+    --clr-gray-150: #E6E9EA;
+    --clr-gray-200: #C6CACD;
+    --clr-gray-300: #9AA0A6;
+    --clr-gray-400: #7C8287;
+    --clr-gray-500: #5F6368;
+    --clr-gray-700: #3C4043;
+    --clr-black: #202124;
+
+    /* bg colors */
+    --clr-bg-light-base: #F8FAFD;
+
+
+}

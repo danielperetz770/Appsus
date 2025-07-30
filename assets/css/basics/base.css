@@ -1,7 +1,21 @@
-body {
-    margin: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
+html {
+    /* font-family: var(); */
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p,
 h1,
 h2,
 h3,
@@ -9,15 +23,36 @@ h4,
 h5,
 h6 {
     margin: 0;
+    font-family: var();
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: unset;
+}
+
+button,
+input,
+select {
+    font-family: var();
+}
+
+button {
+    cursor: pointer;
+}
+
+select {
+    cursor: pointer;
 }
 
 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+input[type="checkbox"] {
+    height: auto;
+    background-color: transparent;
+    padding: 0;
 }
