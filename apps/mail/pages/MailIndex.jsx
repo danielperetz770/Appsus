@@ -1,5 +1,6 @@
 
 import { mailService } from "../services/mail.service.js";
+import { MailList } from "../../mail/cmps/MailList.jsx";
 const { useState, useEffect } = React
 
 export function MailIndex() {
@@ -7,14 +8,13 @@ export function MailIndex() {
     const [mails, setMails] = useState([])
     const [selectedMail, setSelectedMail] = useState(null)
 
-
     useEffect(() => {
         loadMails()
     }, [])
 
-    function onSetSelectedMail(mail) {
-        setSelectedMail(mail)
-    }
+function onSetSelectedMail(mail){
+    setSelectedMail(mail)
+}
 
     function loadMails() {
         mailService.query()
@@ -22,41 +22,12 @@ export function MailIndex() {
             .catch(err => console.log('failed to load', err))
     }
 
-
-
     if (!mails || !mails.length) return <div>loading...</div>
     return (
-        <React.Fragment>
-            
-            <div className="header flex space-between align-center">
-                <div className="search-bar">
-                    <img className="google-pic" src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x_rtl_r5.png"></img>
-                </div>
-                <div className="picture">
-                    <input type="text" placeholder="Search in Gmail" />
-                </div>
-            </div>
-            {selectedMail ? <MailPreview selectedMail={selectedMail} /> :
-                <section className="container">Mail app
-                    <ul className="mail-list">
-                        {mails.map(mail => (
-                            [
-                                <li key={mail.id}
-                                    className={`flex ${mail.isRead ? "not-bold" : "bold"}`}
-                                    onClick={() => onSetSelectedMail(mail)}>
-                                    <p>{mail.subject}</p>
-                                    {/* <p>{mail.body}</p> */}
-                                    {/* <p>{mail.isRead}</p> */}
-                                    <p>from:{mail.from}</p>
-                                    {/* <p>time sent:{mail.sentAt}</p> */}
-                                </li>,
-                                <hr className="seperator"></hr>
-                            ]
-                        ))
-                        }
-                    </ul>
-                </section>
-            }
-        </React.Fragment>
+        <MailList
+            mails={mails} 
+            onSetSelectedMail={onSetSelectedMail}
+            selectedMail={selectedMail}
+            />
     )
 }
