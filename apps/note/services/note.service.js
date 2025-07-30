@@ -13,7 +13,7 @@ export const noteService = {
     getEmptyNote,
     getDefaultFilter
 }
-console.log('example')
+
 function query(filterBy = {}) {
     return storageService.query(NOTE_KEY)
         .then(notes => {
