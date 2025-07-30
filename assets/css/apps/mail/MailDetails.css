@@ -1,0 +1,28 @@
+.mail-details {
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-bet;
+}
+
+.single-mail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.new-mail {
+    cursor: pointer;
+}
+
+.Sent {
+    cursor: pointer;
+}
+
+.Stared {
+    cursor: pointer;
+}
+
+.Inbox {
+    cursor: pointer;
+}
