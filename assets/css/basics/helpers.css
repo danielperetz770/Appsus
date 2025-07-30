@@ -40,8 +40,10 @@ font-weight: bold;
 
 .flex.bold{
     gap: 70px;
+    cursor: pointer;
 }
 
 .flex.not-bold{
     gap: 70px;
+    cursor: pointer;
 }
