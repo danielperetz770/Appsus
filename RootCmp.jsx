@@ -7,11 +7,9 @@ import { About } from './pages/About.jsx'
 import { Home } from './pages/Home.jsx'
 import { MailIndex } from './apps/mail/pages/MailIndex.jsx'
 import { NoteIndex } from './apps/note/pages/NoteIndex.jsx'
-<<<<<<< HEAD
 import { mailService } from './apps/mail/services/mail.service.js'
-=======
 import { noteService } from './apps/note/services/note.service.js'
->>>>>>> 31e872f1851eb1643200fcfec63ae951206d93ba
+
 
 
 export function RootCmp() {
