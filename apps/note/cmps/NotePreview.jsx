@@ -4,17 +4,20 @@
 
 export function NotePreview({ note }) {
   return (
-    <article className="note-preview">
+    <React.Fragment>
+
       <h3>{note.info.title || 'No Title'}</h3>
       {note.type === 'NoteTxt' && <p>{note.info.txt}</p>}
       {note.type === 'NoteImg' && <img src={note.info.url} alt={note.info.title} />}
-      {note.type === 'NoteTodos' && (
-        <ul>
-          {note.info.todos.map((todo, idx) => (
-            <li key={idx} className={todo.doneAt ? 'done' : ''}>{todo.txt}</li>
-          ))}
-        </ul>
-      )}
-    </article>
+      {
+        note.type === 'NoteTodos' && (
+          <ul>
+            {note.info.todos.map((todo, idx) => (
+              <li key={idx} className={todo.doneAt ? 'done' : ''}>{todo.txt}</li>
+            ))}
+          </ul>
+        )
+      }
+    </React.Fragment>
   )
 }

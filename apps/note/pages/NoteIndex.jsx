@@ -57,6 +57,7 @@ export function NoteIndex() {
     }
 
 
+
     return (
         <section className="note-index">
             <NoteHeader
@@ -74,6 +75,7 @@ export function NoteIndex() {
             ) : (
                 <NoteList notes={filteredNotes} onRemove={handleRemoveNote} />
             )}
+
         </section>
     )
 
