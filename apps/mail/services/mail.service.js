@@ -3,7 +3,6 @@ import { storageService } from '../../../services/async-storage.service.js'
 
 const MAIL_KEY = 'mailDB'
 
-console.log('hi')
 _createMails()
 
 

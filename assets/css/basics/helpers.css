@@ -21,3 +21,11 @@
 .grid {
     display: grid;
 }
+
+.mail-list{
+    list-style-type: none;
+}
+
+.mail{
+    margin-top: 40px;
+}
