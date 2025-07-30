@@ -1,3 +1,8 @@
 .container {
     padding: 0 1em;
 }
+
+.google-pic {
+    height: auto;
+    cursor: pointer;
+}
