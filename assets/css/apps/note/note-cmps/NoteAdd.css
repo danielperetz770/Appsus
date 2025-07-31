@@ -1,20 +1,32 @@
 .note-add {
     display: flex;
+    flex-direction: column;
     gap: 0.5rem;
     margin: 1rem 0;
+    max-width: 400px;
 }
 
-.note-add input {
-    flex: 1;
-    padding: 0.5rem;
-    border-radius: 8px;
+.note-add__title,
+.note-add__content,
+.note-add__select {
+    padding: 8px 12px;
+    font-size: 16px;
     border: 1px solid #ccc;
+    border-radius: 8px;
 
+    box-sizing: border-box;
+    width: 100%;
+    outline-offset: 2px;
+    transition: border-color 0.2s ease-in-out;
 }
 
-.note-add button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 8px;
+.note-add__title:focus,
+.note-add__content:focus,
+.note-add__select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.note-add__select {
     cursor: pointer;
 }

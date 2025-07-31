@@ -17,3 +17,48 @@
   border: none;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+
+.loading .spin {
+  font-size: 48px;
+  animation: spin 1.5s linear infinite, colorChange 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #4285F4;
+  }
+
+  25% {
+    color: #34A853;
+  }
+
+  50% {
+    color: #FBBC05;
+  }
+
+  75% {
+    color: #EA4335;
+  }
+
+  100% {
+    color: #4285F4;
+  }
+}

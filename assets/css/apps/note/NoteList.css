@@ -25,6 +25,12 @@
   border-bottom: 1px solid #ddd;
 }
 
+
+
+
+
+
+
 /* .notes-list li:last-child {
   border-bottom: none;
 }
@@ -36,13 +42,13 @@
   font-size: 1.2rem;
   cursor: pointer;
   margin-left: 15px;
-} */
+}
 
-/* .notes-list button.close:hover {
+.notes-list button.close:hover {
   color: #900;
-} */
+}
 
-/* .note-nav button {
+.note-nav button {
   margin-left: 8px;
   background: #007bff;
   border: none;
@@ -51,9 +57,9 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9rem;
-} */
+}
 
-/* .note-nav button i {
+.note-nav button i {
   margin-right: 5px;
 }
 
