@@ -3,12 +3,18 @@ import { MailPreview } from "../../mail/cmps/MailPreview.jsx";
 import { MailFilter } from "./MailFilter.jsx";
 
 // import { MailIndex } from "../pages/MailIndex";
-export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail, handleSetFilter,setMails }) {
+export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail,
+    handleSetFilter, setMails, onSetSortBy, sortBy }) 
+    {
 
-function onInputChange(ev){
-    const txt = ev.target.value
-    handleSetFilter({txt})
-}
+    function onInputChange(ev) {
+        const txt = ev.target.value
+        handleSetFilter({ txt })
+    }
+
+    function onSortChange(ev){
+        onSetSortBy(ev.target.value)
+    }
 
     return (
         <React.Fragment>
@@ -22,6 +28,11 @@ function onInputChange(ev){
             </div>
             {/* {!selectedMail && <MailFilter/>} */}
             <ul className="mail-list">
+                <select onChange={(ev) => onSortChange(ev)} className="mail-sort">
+                    <option value="">sortBy</option>
+                    <option value="subject">Subject</option>
+                    <option value="date">Date</option>
+                </select>
                 {mails.map(mail =>
                     <MailPreview
                         DeleteMail={DeleteMail}
@@ -30,7 +41,7 @@ function onInputChange(ev){
                         onSetSelectedMail={onSetSelectedMail}
                         selectedMail={selectedMail}
                         setMails={setMails}
-                        />
+                    />
                 )}
             </ul >
         </React.Fragment>

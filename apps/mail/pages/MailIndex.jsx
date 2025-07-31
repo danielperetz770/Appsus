@@ -14,10 +14,22 @@ export function MailIndex() {
     const [mails, setMails] = useState([])
     const [selectedMail, setSelectedMail] = useState(null)
     const [filterBy, setFilterBy] = useState(mailService.getDefaultFilter())
+    const [sortBy, setSortBy] = useState('')
 
     useEffect(() => {
         loadMails()
     }, [filterBy])
+
+    useEffect(() => {
+        if (!sortBy) return
+        let sortedMails = [...mails]
+        if (sortBy === 'subject') {
+            sortedMails.sort((a, b) => a.subject.localeCompare(b.subject))
+        } else if (sortBy === 'date') {
+            sortedMails.sort((a, b) => b.sentAt - a.sentAt)
+        }
+        setMails(sortedMails)
+    }, [sortBy,mails])
 
     function onAddMail(newMail) {
         setMails(prevMails => [newMail, ...prevMails])
@@ -30,9 +42,8 @@ export function MailIndex() {
     function DeleteMail(mailToDelete) {
         mailService.remove(mailToDelete.id)
             .then(() => setMails(prevMails => prevMails.filter(mail => mail.id !== mailToDelete.id)))
-            .catch(err =>console.log('unable to remove',err))
+            .catch(err => console.log('unable to remove', err))
     }
-
 
     function loadMails() {
         mailService.query(filterBy)
@@ -42,6 +53,10 @@ export function MailIndex() {
 
     function handleSetFilter(newFilterBy) {
         setFilterBy(newFilterBy)
+    }
+
+    function onSetSortBy(newSortBy) {
+        setSortBy(newSortBy)
     }
 
     const unreadCount = mails.filter(mail => !mail.isRead).length;
@@ -59,6 +74,8 @@ export function MailIndex() {
                 onSetSelectedMail={onSetSelectedMail}
                 selectedMail={selectedMail}
                 setMails={setMails}
+                onSetSortBy={onSetSortBy}
+                sortBy={sortBy}
             />}
             {selectedMail && <MailDetails
                 selectedMail={selectedMail} />}
