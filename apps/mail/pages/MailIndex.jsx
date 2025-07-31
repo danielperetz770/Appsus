@@ -29,7 +29,7 @@ export function MailIndex() {
             sortedMails.sort((a, b) => b.sentAt - a.sentAt)
         }
         setMails(sortedMails)
-    }, [sortBy,mails])
+    }, [sortBy, mails])
 
     function onAddMail(newMail) {
         setMails(prevMails => [newMail, ...prevMails])
@@ -63,7 +63,7 @@ export function MailIndex() {
 
     if (!mails || !mails.length) return <div className="loader">loading...</div>
     return (
-        <React.Fragment>
+        <div className="general-container">
             <MailNavBar
                 unreadCount={unreadCount}
                 onAddMail={onAddMail} />
@@ -79,6 +79,6 @@ export function MailIndex() {
             />}
             {selectedMail && <MailDetails
                 selectedMail={selectedMail} />}
-        </React.Fragment>
+        </div>
     )
 }
