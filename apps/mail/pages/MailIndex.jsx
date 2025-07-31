@@ -17,6 +17,10 @@ export function MailIndex() {
         loadMails()
     }, [])
 
+    function onAddMail(newMail) {
+        setMails(prevMails => [newMail, ...prevMails])
+    }
+
     function onSetSelectedMail(mail) {
         setSelectedMail(mail)
     }
@@ -30,7 +34,7 @@ export function MailIndex() {
     if (!mails || !mails.length) return <div>loading...</div>
     return (
         <React.Fragment>
-            <MailNavBar />
+            <MailNavBar onAddMail={onAddMail} />
             {!selectedMail && <MailList
                 mails={mails}
                 onSetSelectedMail={onSetSelectedMail}
