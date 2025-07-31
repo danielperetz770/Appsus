@@ -7,9 +7,10 @@ body {
     grid-column: 2;
 } */
 
+
+/* this is MailNavBar.css */
 .side-header-container {
     position: absolute;
-
     flex-direction: column;
     top: 0;
     left: 0;
@@ -21,10 +22,31 @@ body {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin-top: 76px;
+    /* margin-top: 76px; */
     z-index: 1;
 }
 
-.general-container{
-    position: relative;
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    align-items: flex-start;
+    margin-left: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    gap: 20px;
+}
+
+.mail-count{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inbox{
+    cursor: pointer;
+}
+
+.sent{
+cursor: pointer;
 }
