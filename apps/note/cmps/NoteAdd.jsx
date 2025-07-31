@@ -54,7 +54,7 @@ export function NoteAdd({ onAddNote }) {
         <form className="note-add" onSubmit={handleSubmit} style={{ maxWidth: "400px" }}>
             <input
                 type="text"
-                placeholder="שם"
+                placeholder="Title"
                 value={title}
                 onChange={(e) => {
                     setTitle(e.target.value)
@@ -73,8 +73,8 @@ export function NoteAdd({ onAddNote }) {
                     onChange={(e) => setNoteType(e.target.value)}
                     className="note-add__select"
                 >
-                    <option value="NoteTxt">טקסט רגיל</option>
-                    <option value="NoteTodos">רשימת משימות</option>
+                    <option value="NoteTxt">Note</option>
+                    <option value="NoteTodos">Todo-List</option>
                 </select>
             )}
 
@@ -83,7 +83,7 @@ export function NoteAdd({ onAddNote }) {
                     type="text"
                     placeholder={
                         noteType === "NoteTxt"
-                            ? "כתיבת פתק..."
+                            ? " Your'e Text..."
                             : " Todi-list"
                     }
                     value={inputValue}

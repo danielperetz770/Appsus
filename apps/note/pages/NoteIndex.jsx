@@ -51,23 +51,58 @@ export function NoteIndex() {
     }
 
     return (
-        <section className="note-index">
-            <NoteHeader searchTerm={searchTerm} setSearchTerm={setSearchTerm} onReload={loadNotes} />
+        <div className="note-index grid">
 
-            <NoteAdd onAddNote={onAddNote} />
+            <section className="note-header-container">
+                <NoteHeader
+                    searchTerm={searchTerm}
+                    setSearchTerm={setSearchTerm}
+                    onReload={loadNotes}
+                />
+            </section>
 
-            {isLoading ? (
-                <div className="loading">
-                    <span className="material-symbols-outlined spin">autorenew</span>
-                </div>
+            <section className="note-add-container">
+                <NoteAdd onAddNote={onAddNote} />
+            </section>
 
-            ) : !filteredNotes.length ? (
-                <div className="no-notes">No notes to show</div>
-            ) : (
-                <NoteList notes={filteredNotes} onRemove={handleRemoveNote} onUpdateNote={handleUpdateNote} />
-            )}
+            <section className="note-list-container">
+                {isLoading ? (
+                    <div className="loading">
+                        <span className="material-symbols-outlined spin">autorenew</span>
+                    </div>
+                ) : !filteredNotes.length ? (
+                    <div className="no-notes">No notes to show</div>
+                ) : (
+                    <NoteList
+                        notes={filteredNotes}
+                        onRemove={handleRemoveNote}
+                        onUpdateNote={handleUpdateNote}
+                    />
+                )}
+            </section>
 
-        </section>
+        </div>
     )
+
+
+    // return (
+    //     <section className="note-index">
+    //         <NoteHeader searchTerm={searchTerm} setSearchTerm={setSearchTerm} onReload={loadNotes} />
+
+    //         <NoteAdd onAddNote={onAddNote} />
+
+    //         {isLoading ? (
+    //             <div className="loading">
+    //                 <span className="material-symbols-outlined spin">autorenew</span>
+    //             </div>
+
+    //         ) : !filteredNotes.length ? (
+    //             <div className="no-notes">No notes to show</div>
+    //         ) : (
+    //             <NoteList notes={filteredNotes} onRemove={handleRemoveNote} onUpdateNote={handleUpdateNote} />
+    //         )}
+
+    //     </section>
+    // )
 
 }

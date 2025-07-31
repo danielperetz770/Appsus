@@ -11,7 +11,7 @@
 .note-add__select {
     padding: 8px 12px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 8px;
 
     box-sizing: border-box;
@@ -29,4 +29,19 @@
 
 .note-add__select {
     cursor: pointer;
+}
+
+.note-add-container {
+    justify-self: center;
+    align-content: center;
+
+    margin-block: 24px;
+    width: 600px;
+    padding-block: 6px;
+    padding-inline: 16px;
+    height: auto;
+
+    background-color: var(--clr-white);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.34) 0px 2px 10px;
 }

@@ -46,3 +46,18 @@
   color: #999;
   opacity: 0.7;
 }
+
+.btn-remove {
+  display: flex;
+  border: none;
+  background-color: white;
+  justify-content: center;
+  margin: auto;
+  margin-top: 15px;
+  padding-top: 0.5em;
+}
+
+.btn-remove:hover {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
