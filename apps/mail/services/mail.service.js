@@ -157,6 +157,176 @@ function _createMails() {
                 removedAt: null,
                 from: 'billing@hosting.co.il',
                 to: 'user@appsus.com'
+            },
+
+            {
+                id: 'm106',
+                createdAt: Date.now() - 1000 * 60 * 45,
+                subject: '¡Oferta exclusiva para ti!',
+                body: `Hola,
+
+                Tenemos una oferta limitada por tiempo exclusivo solo para nuestros suscriptores.
+                Accede a descuentos de hasta un 50% en productos seleccionados.
+
+                Saludos,
+                Equipo de Ventas`,
+                isRead: false,
+                sentAt: Date.now() - 1000 * 60 * 45 + 1200,
+                removedAt: null,
+                from: 'ventas@ofertas.com',
+                to: 'user@appsus.com'
+            },
+            {
+                id: 'm107',
+                createdAt: Date.now() - 1000 * 60 * 60 * 4,
+                subject: 'עדכון אבטחה חשוב',
+                body: `שלום,
+
+                מערכת האבטחה שלנו זיהתה ניסיון כניסה לחשבונך ממיקום לא מזוהה.
+                אם זו לא הייתה אתה, אנא שנה את הסיסמה שלך מיד.
+
+                בברכה,
+                צוות התמיכה`,
+                isRead: true,
+                sentAt: Date.now() - 1000 * 60 * 60 * 4 + 800,
+                removedAt: null,
+                from: 'security@safeapp.com',
+                to: 'user@appsus.com'
+            },
+            {
+                id: 'm108',
+                createdAt: Date.now() - 1000 * 60 * 60 * 24 * 3,
+                subject: 'Welcome to CodeVerse!',
+                body: `Hey Developer,
+
+                We're thrilled to have you join CodeVerse!
+                Start building your first project today and connect with thousands of developers.
+
+                Happy Coding!
+                – CodeVerse Team`,
+                isRead: false,
+                sentAt: Date.now() - 1000 * 60 * 60 * 24 * 3 + 2500,
+                removedAt: null,
+                from: 'team@codeverse.dev',
+                to: 'newuser@appsus.com'
+            },
+            {
+                id: 'm109',
+                createdAt: Date.now() - 1000 * 60 * 90,
+                subject: 'תזכורת לתשלום',
+                body: `לקוח יקר,
+
+                עדיין לא התקבל תשלום עבור חשבונית מספר 4582.
+                נא להסדיר את התשלום עד לתאריך 5.8.2025.
+
+                בברכה,
+                מחלקת הנהלת חשבונות`,
+                isRead: false,
+                sentAt: Date.now() - 1000 * 60 * 90 + 1500,
+                removedAt: null,
+                from: 'billing@bizmail.co.il',
+                to: 'user@appsus.com'
+            },
+            {
+                id: 'm110',
+                createdAt: Date.now() - 1000 * 60 * 60 * 12,
+                subject: 'Your flight itinerary is ready',
+                body: `Dear John,
+
+                Your upcoming flight to Paris is confirmed.
+                Please find your itinerary attached and arrive at the airport 3 hours prior to departure.
+
+                Bon voyage!
+                AirNow`,
+                isRead: true,
+                sentAt: Date.now() - 1000 * 60 * 60 * 12 + 3000,
+                removedAt: null,
+                from: 'noreply@airnow.com',
+                to: 'john.doe@appsus.com'
+            },
+            {
+                id: 'm111',
+                createdAt: Date.now() - 1000 * 60 * 20,
+                subject: 'Re: Lunch tomorrow?',
+                body: `Sounds perfect! Let’s meet at the new Italian place near your office.
+                How about 12:30?
+
+                – Emma`,
+                isRead: false,
+                sentAt: Date.now() - 1000 * 60 * 20 + 500,
+                removedAt: null,
+                from: 'emma.friends@socialmail.com',
+                to: 'user@appsus.com'
+            },
+            {
+                id: 'm112',
+                createdAt: Date.now() - 1000 * 60 * 60 * 72,
+                subject: 'תודה על השתתפותך בכנס',
+                body: `שלום רב,
+
+                אנו מודים לך על השתתפותך בכנס החדשנות 2025.
+                המצגות יהיו זמינות להורדה באתר הכנס בשבוע הקרוב.
+
+                להתראות באירועים הבאים!
+                צוות הכנס`,
+                isRead: true,
+                sentAt: Date.now() - 1000 * 60 * 60 * 72 + 1000,
+                removedAt: null,
+                from: 'conference@eventhub.co.il',
+                to: 'user@appsus.com'
+            },
+            {
+                id: 'm113',
+                createdAt: Date.now() - 1000 * 60 * 15,
+                subject: '🎉 Congratulations! You’ve won a prize!',
+                body: `Hi!
+
+                You've been selected as the winner of our July giveaway.
+                Click here to claim your prize.
+
+                Cheers,
+                Giveaway Team`,
+                isRead: false,
+                sentAt: Date.now() - 1000 * 60 * 15 + 1200,
+                removedAt: null,
+                from: 'prizes@luckywin.com',
+                to: 'user@appsus.com'
+            },
+            {
+                id: 'm114',
+                createdAt: Date.now() - 1000 * 60 * 10,
+                subject: 'אישור הזמנתך התקבל',
+                body: `שלום,
+
+                הזמנתך לאוזניות Bluetooth התקבלה בהצלחה.
+                מספר הזמנה: #578129
+
+                תודה שרכשת מאיתנו,
+                צוות BuyNow`,
+                isRead: true,
+                sentAt: Date.now() - 1000 * 60 * 10 + 600,
+                removedAt: null,
+                from: 'orders@buynow.co.il',
+                to: 'user@appsus.com'
+            },
+            {
+                id: 'm115',
+                createdAt: Date.now() - 1000 * 60 * 60 * 6,
+                subject: 'Weekly Digest – Top articles for you',
+                body: `Hi there,
+
+                 Here are this week’s top articles curated just for you:
+                 1. 10 productivity hacks
+                 2. React vs Vue – who wins?
+                 3. How to manage remote teams
+
+                 Enjoy your read!
+                 – The StackTeam`,
+                isRead: false,
+                sentAt: Date.now() - 1000 * 60 * 60 * 6 + 1800,
+                removedAt: null,
+                from: 'newsletter@stackmail.com',
+                to: 'user@appsus.com'
             }
         ]
 
