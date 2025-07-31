@@ -51,3 +51,7 @@ font-weight: bold;
     background-color: rgb(245, 252, 255);
 }
 
+.hidden{
+    display: none;
+}
+

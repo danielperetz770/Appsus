@@ -1,12 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
-/* ul.mail-list {
-    grid-column: 2;
-} */
-
 
 /* this is MailNavBar.css */
 .side-header-container {
@@ -43,10 +34,19 @@ body {
     justify-content: space-between;
 }
 
-.inbox{
+.new-mail {
     cursor: pointer;
 }
 
-.sent{
-cursor: pointer;
+.Sent {
+    cursor: pointer;
 }
+
+.stared {
+    cursor: pointer;
+}
+
+.inbox {
+    cursor: pointer;
+}
+

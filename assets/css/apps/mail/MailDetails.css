@@ -4,22 +4,6 @@
     /* justify-content: space-bet; */
 }
 
-.new-mail {
-    cursor: pointer;
-}
-
-.Sent {
-    cursor: pointer;
-}
-
-.stared {
-    cursor: pointer;
-}
-
-.inbox {
-    cursor: pointer;
-}
-
 ul.mail-list{
     margin-left: 220px;
 }
@@ -28,7 +12,7 @@ ul.mail-list{
     display: flex;
     align-items: center;
     border:none ;
-    width: 50px;
+    width: 20px;
     background-color:rgb(245, 252, 255);
     height: 50px;
     margin: 0;;

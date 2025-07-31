@@ -29,7 +29,7 @@ export function MailIndex() {
             sortedMails.sort((a, b) => b.sentAt - a.sentAt)
         }
         setMails(sortedMails)
-    }, [sortBy, mails])
+    }, [sortBy])
 
     function onAddMail(newMail) {
         setMails(prevMails => [newMail, ...prevMails])
