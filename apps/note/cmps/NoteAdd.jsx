@@ -1,4 +1,4 @@
-const { useState, useEffect } = React
+const { useState } = React
 
 export function NoteAdd({ onAddNote }) {
     const [title, setTitle] = useState("")
@@ -17,7 +17,7 @@ export function NoteAdd({ onAddNote }) {
             newNote = {
                 type: "NoteTxt",
                 info: {
-                    title: title.trim() || "כותרת לא מוגדרת",
+                    title: title.trim() || "No-title",
                     txt: inputValue,
                 },
                 style: { backgroundColor: "#fff" },
@@ -83,7 +83,7 @@ export function NoteAdd({ onAddNote }) {
                     type="text"
                     placeholder={
                         noteType === "NoteTxt"
-                            ? " Your'e Text..."
+                            ? "Enter notes with commas"
                             : " Todi-list"
                     }
                     value={inputValue}

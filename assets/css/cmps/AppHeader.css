@@ -1,8 +1,31 @@
-.app-header {
+/* .app-header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
     background: var(--bg1);
+} */
+
+/* .app-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: var(--bg1);
+} */
+
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: var(--bg1);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+ 
 }
 
 nav a {
