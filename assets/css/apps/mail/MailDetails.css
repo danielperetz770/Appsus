@@ -1,13 +1,7 @@
 .mail-details {
     border: 2px solid black;
     display: flex;
-    justify-content: space-bet;
-}
-
-.single-mail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* justify-content: space-bet; */
 }
 
 .new-mail {
@@ -18,11 +12,11 @@
     cursor: pointer;
 }
 
-.Stared {
+.stared {
     cursor: pointer;
 }
 
-.Inbox {
+.inbox {
     cursor: pointer;
 }
 

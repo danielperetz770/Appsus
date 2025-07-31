@@ -3,7 +3,7 @@
 export function MailDetails({ selectedMail }) {
 
     return (
-        <ul className="single-mail">
+        <ul className="mail-details">
             <section className="container">
                 <li className="mail-list">
                     <div className="mail-details flex column">

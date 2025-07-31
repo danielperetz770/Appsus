@@ -1,11 +1,10 @@
-.compose-form {
+.mail-compose {
     width: 700px;
     height: 500px;
     position: fixed;
     bottom: 0px;
     right: 0px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    /* border: 1px solid black; */
 }
 
 input {
@@ -15,7 +14,7 @@ input {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.compose-form h2 {
+.mail-compose h2 {
     background-color: rgb(209, 234, 255);
 
 }

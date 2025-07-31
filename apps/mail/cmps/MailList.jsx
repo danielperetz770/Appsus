@@ -1,8 +1,6 @@
 
 import { MailPreview } from "../../mail/cmps/MailPreview.jsx";
 // import { MailIndex } from "../pages/MailIndex";
-
-
 export function MailList({ mails, onSetSelectedMail, selectedMail }) {
 
     return (

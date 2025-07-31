@@ -48,5 +48,5 @@
 
 
 @import './apps/mail/MailDetails.css';
-@import './apps/mail/GmailLayout.css';
-@import './apps/mail/GmailForm.css';
+@import './apps/mail/MailLayout.css';
+@import './apps/mail/MailCompose.css';

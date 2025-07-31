@@ -1,8 +1,14 @@
 
 export function MailCompose({ closeForm }) {
 
+
+
+function addMailToList(){
+
+}
+
     return (
-        <div className="compose-form">
+        <div className="mail-compose">
             <h2>New Message</h2>
             <form className="flex column gap">
                 <input type="email" placeholder="To" name="to" required />
@@ -13,7 +19,7 @@ export function MailCompose({ closeForm }) {
                 <hr></hr>
 
                 <div className="form-actions flex space-between">
-                    <button type="submit" className="btn send">Send</button>
+                    <button type="submit" className="btn send" onClick={addMailToList}>Send</button>
                     <button type="button" className="btn close" onClick={closeForm}>x</button>
                 </div>
             </form>

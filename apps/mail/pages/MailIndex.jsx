@@ -2,8 +2,8 @@
 import { mailService } from "../services/mail.service.js";
 import { MailList } from "../../mail/cmps/MailList.jsx";
 import { MailDetails } from "../pages/MailDetails.jsx";
-import { MailCompose } from "../cmps/MailCompose.jsx";
-import { AppSideHeader } from "../cmps/AppSideHeader.jsx";
+// import { MailCompose } from "../cmps/MailCompose.jsx";
+import { MailNavBar } from "../cmps/MailNavBar.jsx";
 
 
 const { useState, useEffect } = React
@@ -28,15 +28,15 @@ export function MailIndex() {
     }
 
     if (!mails || !mails.length) return <div>loading...</div>
-    if (selectedMail) return <MailDetails selectedMail={selectedMail} />
     return (
         <React.Fragment>
-            <AppSideHeader/>
-            <MailList
+            <MailNavBar />
+            {!selectedMail && <MailList
                 mails={mails}
                 onSetSelectedMail={onSetSelectedMail}
                 selectedMail={selectedMail}
-            />
+            />}
+            {selectedMail && <MailDetails selectedMail={selectedMail} />}
         </React.Fragment>
     )
 }
