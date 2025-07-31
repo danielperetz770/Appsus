@@ -3,7 +3,7 @@ import { MailPreview } from "../../mail/cmps/MailPreview.jsx";
 import { MailFilter } from "./MailFilter.jsx";
 
 // import { MailIndex } from "../pages/MailIndex";
-export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail, handleSetFilter }) {
+export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail, handleSetFilter,setMails }) {
 
 function onInputChange(ev){
     const txt = ev.target.value
@@ -28,7 +28,9 @@ function onInputChange(ev){
                         key={mail.id}
                         mail={mail}
                         onSetSelectedMail={onSetSelectedMail}
-                        selectedMail={selectedMail} />
+                        selectedMail={selectedMail}
+                        setMails={setMails}
+                        />
                 )}
             </ul >
         </React.Fragment>

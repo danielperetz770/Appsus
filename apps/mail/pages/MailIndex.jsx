@@ -47,17 +47,19 @@ export function MailIndex() {
     if (!mails || !mails.length) return <div className="loader">loading...</div>
     return (
         <React.Fragment>
-            <MailNavBar 
-            unreadCount={unreadCount}
-            onAddMail={onAddMail} />
+            <MailNavBar
+                unreadCount={unreadCount}
+                onAddMail={onAddMail} />
             {!selectedMail && <MailList
-            handleSetFilter={handleSetFilter}
+                handleSetFilter={handleSetFilter}
                 DeleteMail={DeleteMail}
                 mails={mails}
                 onSetSelectedMail={onSetSelectedMail}
                 selectedMail={selectedMail}
+                setMails={setMails}
             />}
-            {selectedMail && <MailDetails selectedMail={selectedMail} />}
+            {selectedMail && <MailDetails
+                selectedMail={selectedMail} />}
         </React.Fragment>
     )
 }
