@@ -1,6 +1,11 @@
 
 import { mailService } from "../services/mail.service.js";
 import { MailList } from "../../mail/cmps/MailList.jsx";
+import { MailDetails } from "../pages/MailDetails.jsx";
+import { MailCompose } from "../cmps/MailCompose.jsx";
+import { AppSideHeader } from "../cmps/AppSideHeader.jsx";
+
+
 const { useState, useEffect } = React
 
 export function MailIndex() {
@@ -12,9 +17,9 @@ export function MailIndex() {
         loadMails()
     }, [])
 
-function onSetSelectedMail(mail){
-    setSelectedMail(mail)
-}
+    function onSetSelectedMail(mail) {
+        setSelectedMail(mail)
+    }
 
     function loadMails() {
         mailService.query()
@@ -23,11 +28,15 @@ function onSetSelectedMail(mail){
     }
 
     if (!mails || !mails.length) return <div>loading...</div>
+    if (selectedMail) return <MailDetails selectedMail={selectedMail} />
     return (
-        <MailList
-            mails={mails} 
-            onSetSelectedMail={onSetSelectedMail}
-            selectedMail={selectedMail}
+        <React.Fragment>
+            <AppSideHeader/>
+            <MailList
+                mails={mails}
+                onSetSelectedMail={onSetSelectedMail}
+                selectedMail={selectedMail}
             />
+        </React.Fragment>
     )
 }
