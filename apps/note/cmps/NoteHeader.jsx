@@ -11,7 +11,7 @@ export function NoteHeader({ searchTerm, setSearchTerm, onReload }) {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <button onClick={onReload}><img src="icon/keep-assets/asset 20.svg" alt="" /></button>
+                <button onClick={onReload}><img src="icon/keep-assets/asset 20.svg" alt="" className="header-load-icon" /></button>
             </div>
         </header>
     )
