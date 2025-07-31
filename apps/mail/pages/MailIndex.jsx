@@ -51,6 +51,7 @@ export function MailIndex() {
             unreadCount={unreadCount}
             onAddMail={onAddMail} />
             {!selectedMail && <MailList
+            handleSetFilter={handleSetFilter}
                 DeleteMail={DeleteMail}
                 mails={mails}
                 onSetSelectedMail={onSetSelectedMail}

@@ -1,14 +1,14 @@
 
 import { MailPreview } from "../../mail/cmps/MailPreview.jsx";
+import { MailFilter } from "./MailFilter.jsx";
+
 // import { MailIndex } from "../pages/MailIndex";
-export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail, changeFilter }) {
+export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail, handleSetFilter }) {
 
-
-    function onInputChange(ev) {
-        const context = ev.target.value
-        changeFilter({ txt: ev.target.value })
-    }
-
+function onInputChange(ev){
+    const txt = ev.target.value
+    handleSetFilter({txt})
+}
 
     return (
         <React.Fragment>
@@ -20,6 +20,7 @@ export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail, c
                     <input className="search-input" type="text" placeholder="Search in Gmail" onChange={onInputChange} />
                 </div>
             </div>
+            {/* {!selectedMail && <MailFilter/>} */}
             <ul className="mail-list">
                 {mails.map(mail =>
                     <MailPreview
