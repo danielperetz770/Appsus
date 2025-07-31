@@ -28,7 +28,9 @@ export function MailIndex() {
     }
 
     function DeleteMail(mailToDelete) {
-        setMails(prevMails => prevMails.filter(mail => mail.id !== mailToDelete.id))
+        mailService.remove(mailToDelete.id)
+            .then(() => setMails(prevMails => prevMails.filter(mail => mail.id !== mailToDelete.id)))
+            .catch(err =>console.log('unable to remove',err))
     }
 
 
