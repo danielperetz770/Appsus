@@ -6,3 +6,13 @@
      margin-left: 220px;
      width: 120px;
  }
+
+ li.bold:hover {
+     background-color: lightblue;
+     transition: 0.5s;
+    }
+    
+    li.not-bold:hover {
+     transition: 0.5s;
+     background-color: lightblue;
+ }

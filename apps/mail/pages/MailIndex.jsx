@@ -4,6 +4,7 @@ import { MailList } from "../../mail/cmps/MailList.jsx";
 import { MailDetails } from "../pages/MailDetails.jsx";
 // import { MailCompose } from "../cmps/MailCompose.jsx";
 import { MailNavBar } from "../cmps/MailNavBar.jsx";
+import { MailFilter } from "../cmps/MailFilter.jsx";
 
 
 const { useState, useEffect } = React
@@ -12,10 +13,11 @@ export function MailIndex() {
 
     const [mails, setMails] = useState([])
     const [selectedMail, setSelectedMail] = useState(null)
+    const [filterBy, setFilterBy] = useState(mailService.getDefaultFilter())
 
     useEffect(() => {
         loadMails()
-    }, [])
+    }, [filterBy])
 
     function onAddMail(newMail) {
         setMails(prevMails => [newMail, ...prevMails])
@@ -25,17 +27,31 @@ export function MailIndex() {
         setSelectedMail(mail)
     }
 
+    function DeleteMail(mailToDelete) {
+        setMails(prevMails => prevMails.filter(mail => mail.id !== mailToDelete.id))
+    }
+
+
     function loadMails() {
-        mailService.query()
+        mailService.query(filterBy)
             .then(mails => setMails(mails))
             .catch(err => console.log('failed to load', err))
     }
 
-    if (!mails || !mails.length) return <div>loading...</div>
+    function handleSetFilter(newFilterBy) {
+        setFilterBy(newFilterBy)
+    }
+
+    const unreadCount = mails.filter(mail => !mail.isRead).length;
+
+    if (!mails || !mails.length) return <div className="loader">loading...</div>
     return (
         <React.Fragment>
-            <MailNavBar onAddMail={onAddMail} />
+            <MailNavBar 
+            unreadCount={unreadCount}
+            onAddMail={onAddMail} />
             {!selectedMail && <MailList
+                DeleteMail={DeleteMail}
                 mails={mails}
                 onSetSelectedMail={onSetSelectedMail}
                 selectedMail={selectedMail}

@@ -20,11 +20,11 @@ function query(filterBy = {}) {
         .then(mails => {
             if (filterBy.txt) {
                 const regExp = new RegExp(filterBy.txt, 'i')
-                mails = mails.filter(mail => regExp.test(mail.vendor))
+                mails = mails.filter(mail => regExp.test(mail.body))
             }
-            if (filterBy.minSpeed) {
-                mails = mails.filter(mail => mail.speed >= filterBy.minSpeed)
-            }
+            // if (filterBy.minSpeed) {
+            //     mails = mails.filter(mail => mail.speed >= filterBy.minSpeed)
+            // }
             return mails
         })
 }

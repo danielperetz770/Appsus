@@ -1,7 +1,7 @@
 import { MailCompose } from "../cmps/MailCompose.jsx"
 
 
-export function MailNavBar({onAddMail}) {
+export function MailNavBar({onAddMail,unreadCount}) {
     const { useState } = React
 
     const [isCompose, setIsCompose] = useState(false)
@@ -19,6 +19,7 @@ export function MailNavBar({onAddMail}) {
         <div className="side-header-container">
             <div className="new-mail" onClick={showForm}>New Message</div>
             <div className="inbox">Inbox</div>
+            <span>{unreadCount}</span>
             <div className="stared">Stared</div>
             <div className="sent">Sent</div>
             {isCompose && <MailCompose
