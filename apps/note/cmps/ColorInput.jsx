@@ -20,7 +20,7 @@ export function ColorInput({ onSetColorStyle, backgroundColor }) {
                     title="No color"
                     onClick={() => onSetColor(null)}
                 >
-                    🈳
+                   <img src="icon/keep-assets/asset 5.svg" alt="" />
                 </div>
                 {colors.map(color => (
                     <div

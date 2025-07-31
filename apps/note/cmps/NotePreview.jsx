@@ -95,7 +95,7 @@ export function NotePreview({ note, onUpdateNote }) {
   }
 
   return (
-    <section className="note-preview" style={note.style}>
+    <section  style={note.style}>
       <h3>{note.info.title || 'No Title'}</h3>
 
       {note.type === 'NoteTodos' && (
