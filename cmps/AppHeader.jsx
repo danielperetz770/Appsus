@@ -4,13 +4,13 @@ export function AppHeader() {
 
     return <header className="app-header">
         <Link to="/">
-            <h3>Appsus</h3>
+            <img src="/icon/DY-icone-header.svg" className="app-header-icon" alt="" />
         </Link>
         <nav>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/mail">Mail</NavLink>
-            <NavLink to="/note">Note</NavLink>
+            <NavLink to="/"><img src="icon/home-icon.png" alt="" className="note-header-icon" /></NavLink>
+            <NavLink to="/about"><img src="icon/about-icon.png" alt="" className="about-header-icon" /></NavLink>
+            <NavLink to="/mail"><img src="icon/mail-icon.png" alt="" className="mail-header-icon" /></NavLink>
+            <NavLink to="/note"><img src="icon/note-icon.png" alt="" className="note-header-icon" /></NavLink>
         </nav>
     </header>
 }

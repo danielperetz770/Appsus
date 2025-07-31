@@ -12,7 +12,6 @@ export function NoteHeader({ searchTerm, setSearchTerm, onReload }) {
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 <button onClick={onReload}><img src="icon/keep-assets/asset 20.svg" alt="" /></button>
-                <button onClick={() => alert('Settings clicked!')}>⚙️</button>
             </div>
         </header>
     )

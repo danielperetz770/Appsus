@@ -1,0 +1,13 @@
+<svg width="440" height="60" viewBox="0 0 440 60" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="45" font-family="Product Sans, Arial, sans-serif" font-size="40" font-weight="bold">
+    <tspan fill="#FBBC05">D</tspan>          <!-- צהוב -->
+    <tspan fill="#34A853">Y</tspan>          <!-- ירוק -->
+    <tspan fill="#5f6368"> - </tspan>        <!-- אפור ניטרלי -->
+    <tspan fill="#EA4335">A</tspan>          <!-- אדום -->
+    <tspan fill="#4285F4">p</tspan>          <!-- כחול -->
+    <tspan fill="#34A853">p</tspan>          <!-- ירוק -->
+    <tspan fill="#FBBC05">s</tspan>          <!-- צהוב -->
+    <tspan fill="#EA4335">u</tspan>          <!-- אדום -->
+    <tspan fill="#4285F4">s</tspan>          <!-- כחול -->
+  </text>
+</svg>
