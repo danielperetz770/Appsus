@@ -1,4 +1,4 @@
-const { useState, useEffect } = React
+const { useState } = React
 
 export function NoteAdd({ onAddNote }) {
     const [title, setTitle] = useState("")
