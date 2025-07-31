@@ -20,6 +20,7 @@
 
 .item:hover {
   border-color: #555;
+  
 }
 
 .item.chosen {
