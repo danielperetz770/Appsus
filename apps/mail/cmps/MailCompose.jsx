@@ -1,16 +1,27 @@
 
-export function MailCompose({ closeForm }) {
+import { utilService } from "../../../services/util.service.js";
+export function MailCompose({ closeForm, onAddMail }) {
 
 
 
-function addMailToList(){
-
-}
+    function addMailToList(ev) {
+        ev.preventDefault()
+        const newMail = {
+            id: utilService.makeId(),
+            to: ev.target.to.value,
+            subject: ev.target.subject.value,
+            body: ev.target.body.value,
+            from: 'yan46@gmail.com',
+            sentAt: Date.now(),
+            isRead: false
+        }
+        onAddMail(newMail)
+    }
 
     return (
         <div className="mail-compose">
             <h2>New Message</h2>
-            <form className="flex column gap">
+            <form className="flex column gap" onSubmit={addMailToList}>
                 <input type="email" placeholder="To" name="to" required />
                 <hr></hr>
                 <input type="text" placeholder="Subject" name="subject" />
@@ -19,7 +30,7 @@ function addMailToList(){
                 <hr></hr>
 
                 <div className="form-actions flex space-between">
-                    <button type="submit" className="btn send" onClick={addMailToList}>Send</button>
+                    <button type="submit" className="btn send">Send</button>
                     <button type="button" className="btn close" onClick={closeForm}>x</button>
                 </div>
             </form>
