@@ -54,7 +54,7 @@ export function NoteAdd({ onAddNote }) {
         <form className="note-add" onSubmit={handleSubmit} style={{ maxWidth: "400px" }}>
             <input
                 type="text"
-                placeholder="שם"
+                placeholder="Title"
                 value={title}
                 onChange={(e) => {
                     setTitle(e.target.value)

@@ -36,6 +36,7 @@
 /* Notes Cmps */
 @import './apps/note/note-cmps/NoteHeader.css';
 @import './apps/note/note-cmps/NoteAdd.css';
+@import './apps/note/note-cmps/ColorInput.css';
 @import './apps/note/NoteIndex.css';
 @import './apps/note/NotePrevie.css';
 @import './apps/note/NoteList.css';
