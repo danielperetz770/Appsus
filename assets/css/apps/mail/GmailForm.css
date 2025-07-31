@@ -1,0 +1,39 @@
+.compose-form {
+    width: 700px;
+    height: 500px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* border: 1px solid black; */
+}
+
+input {
+    border: none;
+    text-decoration: underline;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.compose-form h2 {
+    background-color: rgb(209, 234, 255);
+
+}
+
+textarea {
+    border: none;
+}
+
+.btn.close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: none;
+    color: black;
+    background-color: rgb(209, 234, 255);
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+
+
+}

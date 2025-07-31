@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .new-mail {
@@ -25,4 +24,8 @@
 
 .Inbox {
     cursor: pointer;
+}
+
+ul.mail-list{
+    margin-left: 220px;
 }

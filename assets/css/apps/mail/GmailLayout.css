@@ -7,3 +7,19 @@ body {
 /* ul.mail-list {
     grid-column: 2;
 } */
+
+.side-header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #f1f3f4;
+    padding: 16px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 53.5px;
+    z-index: 1;
+}

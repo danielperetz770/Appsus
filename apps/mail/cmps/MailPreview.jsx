@@ -11,7 +11,7 @@ export function MailPreview({ mail, onSetSelectedMail, selectedMail }) {
                 className={`flex ${mail.isRead ? "not-bold" : "bold"}`}
                 onClick={() => onSetSelectedMail(mail)}>
                 <p>{mail.subject}</p>
-                <p>from:{mail.from}</p>
+                <p>from:{mail.body}</p>
             </li>
             <hr className="seperator"></hr>
         </React.Fragment>

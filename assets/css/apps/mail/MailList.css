@@ -3,4 +3,6 @@
  .google-pic {
      height: auto;
      cursor: pointer;
+     margin-left: 220px;
+     width: 120px;
  }
