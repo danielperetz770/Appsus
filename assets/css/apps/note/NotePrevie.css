@@ -4,6 +4,7 @@
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
   box-sizing: border-box;
   word-wrap: break-word;
   font-family: Arial, sans-serif;
@@ -12,10 +13,14 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+
+
 }
 
 .note-preview:hover {
   box-shadow: 0px 0px 15px #ddd;
+  scale: 1.01;
+  transition: 0.3s;
 
 }
 
@@ -60,7 +65,7 @@
   margin: auto;
   margin-top: 15px;
   padding-top: 0.5em;
-  display: none;
+  /* display: none; */
 }
 
 .btn-remove:hover {
@@ -68,7 +73,6 @@
   border-radius: 8px;
 }
 
-.note-preview:hover .btn-remove {
-
+/* .note-preview:hover .btn-remove {
   display: block;
-}
+} */
