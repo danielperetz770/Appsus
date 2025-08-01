@@ -110,12 +110,12 @@ export function NoteIndex() {
     useEffect(() => {
         console.log('useEffect started')
         loadNotes()
-    }, [])
+    }, [filterBy])
 
     function loadNotes() {
         setIsLoading(true)
         noteService
-            .query()
+            .query(filterBy)
             .then(notes => {
                 console.log('Loaded notes from service:', notes)
                 setNotes(notes)

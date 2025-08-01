@@ -8,7 +8,7 @@ export function NoteHeader({ filterBy, OnFilterBy, onReload }) {
                     type="text"
                     placeholder="Search notes... "
                     value={filterBy}
-                    onChange={() => OnFilterBy()}
+                    onChange={(e) => onSetFilterBy(e.target.value)}
                 />
                 <img className="search-icon" src="icon/keep-assets/asset 8.svg" alt="" />
                 <button className="btn-header-load-icon" onClick={onReload}><img src="icon/keep-assets/asset 20.svg" alt="" /></button>

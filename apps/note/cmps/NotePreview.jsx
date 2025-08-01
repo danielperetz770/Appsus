@@ -39,7 +39,7 @@ export function NotePreview({ note, onRemove, onUpdateNote, OnFilterBy }) {
                 <input
                   type="checkbox"
                   checked={!!todo.doneAt}
-                  onChange={() => OnFilterBy(input.value)}
+                  onChange={() => toggleTodoDone(idx)}
                 />
                 {todo.txt}
               </label>
