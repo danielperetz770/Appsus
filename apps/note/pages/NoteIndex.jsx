@@ -1,9 +1,11 @@
-const { useState, useEffect } = React
-
 import { noteService } from '../../note/services/note.service.js'
 import { NoteHeader } from '../cmps/NoteHeader.jsx'
 import { NoteAdd } from '../cmps/NoteAdd.jsx'
 import { NoteList } from '../cmps/NoteList.jsx'
+
+
+const { useState, useEffect } = React
+
 
 export function NoteIndex() {
     console.log('NoteIndex component rendered')
@@ -83,26 +85,5 @@ export function NoteIndex() {
 
         </div>
     )
-
-
-    // return (
-    //     <section className="note-index">
-    //         <NoteHeader searchTerm={searchTerm} setSearchTerm={setSearchTerm} onReload={loadNotes} />
-
-    //         <NoteAdd onAddNote={onAddNote} />
-
-    //         {isLoading ? (
-    //             <div className="loading">
-    //                 <span className="material-symbols-outlined spin">autorenew</span>
-    //             </div>
-
-    //         ) : !filteredNotes.length ? (
-    //             <div className="no-notes">No notes to show</div>
-    //         ) : (
-    //             <NoteList notes={filteredNotes} onRemove={handleRemoveNote} onUpdateNote={handleUpdateNote} />
-    //         )}
-
-    //     </section>
-    // )
 
 }
