@@ -1,9 +1,9 @@
 import { NotePreview } from './NotePreview.jsx'
 
-export function NoteList({ notes, onRemove, onUpdateNote }) {
+export function NoteList({ notes, onRemove, onUpdateNote, OnFilterBy }) {
 
-    const pinnedNotes = notes.filter((note) => note.isPinned)
-    const unpinnedNotes = notes.filter((note) => !note.isPinned)
+    // const pinnedNotes = notes.filter((note) => note.isPinned)
+    // const unpinnedNotes = notes.filter((note) => !note.isPinned)
 
 
 
@@ -12,7 +12,7 @@ export function NoteList({ notes, onRemove, onUpdateNote }) {
         <section className="notes-list grid">
             {notes.map(note => (
                 <article key={note.id} >
-                    <NotePreview note={note} onRemove={onRemove} onUpdateNote={onUpdateNote} />
+                    <NotePreview note={note} onRemove={onRemove} onUpdateNote={onUpdateNote} OnFilterBy={OnFilterBy} />
                 </article>
             ))}
         </section>

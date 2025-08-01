@@ -14,20 +14,36 @@ export const noteService = {
     getDefaultFilter
 }
 
+// function query(filterBy = {}) {
+//     return storageService.query(NOTE_KEY)
+//         .then(notes => {
+//             if (filterBy.txt) {
+//                 const regExp = new RegExp(filterBy.txt, 'i')
+//                 notes = notes.filter(note => regExp.test(note.title))
+//             }
+//             if (filterBy.minPrice) {
+//                 notes = notes.filter(note => note.info >= filterBy.title)
+
+//             }
+//             return notes
+//         })
+// }
 
 function query(filterBy = {}) {
     return storageService.query(NOTE_KEY)
         .then(notes => {
             if (filterBy.txt) {
                 const regExp = new RegExp(filterBy.txt, 'i')
-                notes = notes.filter(note => regExp.test(note.title))
+                notes = notes.filter(note => {
+                    const textToSearch = note.info.title || note.info.txt || ''
+                    return regExp.test(textToSearch)
+                })
             }
-            if (filterBy.minPrice) {
-                notes = notes.filter(note => note.listPrice.amount >= filterBy.minPrice)
-            }
+            // אם יש לך שדות אחרים לסינון - תוסיף אותם כאן
             return notes
         })
 }
+
 
 function get(noteId) {
     return storageService.get(NOTE_KEY, noteId)
@@ -58,7 +74,7 @@ function getEmptyNote() {
 
 
 function getDefaultFilter() {
-    return { txt: '', minPrice: 0, maxPrice: Infinity }
+    return { txt: '' }
 }
 
 function _createNotes() {

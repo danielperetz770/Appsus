@@ -1,6 +1,6 @@
 import { ColorInput } from './ColorInput.jsx'
 
-export function NotePreview({ note, onRemove, onUpdateNote, }) {
+export function NotePreview({ note, onRemove, onUpdateNote, OnFilterBy }) {
 
   function toggleTodoDone(idx) {
     const newTodos = note.info.todos.map((todo, i) => {
