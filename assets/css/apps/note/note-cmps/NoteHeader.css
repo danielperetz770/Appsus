@@ -5,7 +5,7 @@
 
 
 .note-header {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
   padding: 1em;
@@ -22,5 +22,13 @@
 }
 
 .btn-header-load-icon {
-  border: none
+  border: none;
+  /* margin-inline-start: auto; */
+  
 }
+
+.search-icon {
+  cursor: pointer;
+}
+
+
