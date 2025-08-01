@@ -1,3 +1,4 @@
+
 const { useState } = React
 
 export function NoteAdd({ onAddNote }) {
@@ -9,7 +10,7 @@ export function NoteAdd({ onAddNote }) {
     function handleSubmit(ev) {
         ev.preventDefault()
 
-        if (!inputValue.trim()) return;
+        if (!inputValue.trim()) return
 
         let newNote
 
@@ -21,7 +22,7 @@ export function NoteAdd({ onAddNote }) {
                     txt: inputValue,
                 },
                 style: { backgroundColor: "#fff" },
-            };
+            }
         } else if (noteType === "NoteTodos") {
             const todoList = inputValue
                 .split(",")
@@ -29,11 +30,20 @@ export function NoteAdd({ onAddNote }) {
             newNote = {
                 type: "NoteTodos",
                 info: {
-                    title: title.trim() || "Title",
+                    title: title.trim() || "No-title",
                     todos: todoList,
                 },
                 style: { backgroundColor: "#fff" },
-            };
+            }
+        } else if (noteType === "NoteImg") {
+            newNote = {
+                type: "NoteImg",
+                info: {
+                    title: title.trim() || "No-title",
+                    url: inputValue,
+                },
+                style: { backgroundColor: "#fff" },
+            }
         }
 
         onAddNote(newNote)
@@ -75,6 +85,7 @@ export function NoteAdd({ onAddNote }) {
                 >
                     <option value="NoteTxt">Note</option>
                     <option value="NoteTodos">Todo-List</option>
+                    <option value="NoteImg">Image</option>
                 </select>
             )}
 
@@ -83,8 +94,10 @@ export function NoteAdd({ onAddNote }) {
                     type="text"
                     placeholder={
                         noteType === "NoteTxt"
-                            ? "Enter notes with commas"
-                            : " Todi-list"
+                            ? "Enter note text"
+                            : noteType === "NoteTodos"
+                                ? "Enter todos separated by commas"
+                                : "Enter image URL"
                     }
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
@@ -93,5 +106,5 @@ export function NoteAdd({ onAddNote }) {
                 />
             )}
         </form>
-    );
+    )
 }

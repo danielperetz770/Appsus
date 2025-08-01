@@ -52,6 +52,8 @@ export function NoteIndex() {
             .catch(err => console.error('Failed to add note', err))
     }
 
+
+
     return (
         <div className="note-index grid">
 

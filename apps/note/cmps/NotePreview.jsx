@@ -1,6 +1,6 @@
 import { ColorInput } from './ColorInput.jsx'
 
-export function NotePreview({ note, onUpdateNote }) {
+export function NotePreview({ note, onRemove, onUpdateNote, }) {
 
   function toggleTodoDone(idx) {
     const newTodos = note.info.todos.map((todo, i) => {
@@ -48,13 +48,15 @@ export function NotePreview({ note, onUpdateNote }) {
         </ul>
       )}
 
+      {note.type === 'NoteTxt' && <p>{note.info.txt}</p>}
+      {note.type === 'NoteImg' && <img src={note.info.url} alt={note.info.title} />}
       <ColorInput
         onSetColorStyle={handleSetColor}
         backgroundColor={note.style && note.style.backgroundColor}
       />
-      {note.type === 'NoteTxt' && <p>{note.info.txt}</p>}
-      {note.type === 'NoteImg' && <img src={note.info.url} alt={note.info.title} />}
+      <button onClick={() => onRemove(note.id)} className="btn-remove">
+        <img src="icon/keep-assets/asset 18.svg" alt="" />
+      </button>
     </section>
   )
 }
-

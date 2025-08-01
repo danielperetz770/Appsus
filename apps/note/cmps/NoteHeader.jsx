@@ -1,7 +1,7 @@
 
 export function NoteHeader({ searchTerm, setSearchTerm, onReload }) {
     return (
-        <header className="note-header">
+        <header className="note-header flex">
             <img className="logo" src="icon/keep-assets/asset 0.png" alt="icon" />
             <div className="note-controls">
                 <input
@@ -11,7 +11,7 @@ export function NoteHeader({ searchTerm, setSearchTerm, onReload }) {
                     onChange={(e) => setSearchTerm(e.target.value)}
 
                 />
-                <img src="icon/keep-assets/asset 8.svg" alt="" />
+                <img className="search-icon" src="icon/keep-assets/asset 8.svg" alt="" />
                 <button className="btn-header-load-icon" onClick={onReload}><img src="icon/keep-assets/asset 20.svg" alt="" /></button>
             </div>
         </header>
