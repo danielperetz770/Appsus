@@ -1,6 +1,6 @@
 
 import { utilService } from "../../../services/util.service.js";
-export function MailCompose({ closeForm, onAddMail }) {
+export function MailCompose({ toggleIsCompose, onAddMail }) {
 
 
 
@@ -31,7 +31,7 @@ export function MailCompose({ closeForm, onAddMail }) {
 
                 <div className="form-actions flex space-between">
                     <button type="submit" className="btn send">Send</button>
-                    <button type="button" className="btn close" onClick={closeForm}>x</button>
+                    <button type="button" className="btn close" onClick={()=>toggleIsCompose(false)}>x</button>
                 </div>
             </form>
         </div>

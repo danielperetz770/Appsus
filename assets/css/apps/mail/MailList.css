@@ -1,5 +1,10 @@
  /* mail list */
 
+.mail-list{
+background-color: #fff;
+  border-radius: 30px;
+}
+
  .google-pic {
    height: auto;
    cursor: pointer;

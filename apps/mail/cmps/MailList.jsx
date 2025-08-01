@@ -29,7 +29,7 @@ export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail,
             {/* {!selectedMail && <MailFilter/>} */}
             <ul className="mail-list">
                 <div className="sort-wrapper">
-                    <img  src="../../../assets/css/pics/sortPic.svg" alt="Sort icon" className="sort-icon" />
+                    <img  src="assets/pics/sortPic.svg" alt="Sort icon" className="sort-icon" />
                     <select onChange={(ev) => onSortChange(ev)} className="mail-sort">
                         <option value="">sortBy</option>
                         <option value="subject">Subject</option>

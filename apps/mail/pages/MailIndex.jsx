@@ -2,7 +2,7 @@
 import { mailService } from "../services/mail.service.js";
 import { MailList } from "../../mail/cmps/MailList.jsx";
 import { MailDetails } from "../pages/MailDetails.jsx";
-// import { MailCompose } from "../cmps/MailCompose.jsx";
+import { MailCompose } from "../cmps/MailCompose.jsx";
 import { MailNavBar } from "../cmps/MailNavBar.jsx";
 import { MailFilter } from "../cmps/MailFilter.jsx";
 
@@ -15,6 +15,8 @@ export function MailIndex() {
     const [selectedMail, setSelectedMail] = useState(null)
     const [filterBy, setFilterBy] = useState(mailService.getDefaultFilter())
     const [sortBy, setSortBy] = useState('')
+    const [isCompose, setIsCompose] = useState(false)
+
 
     useEffect(() => {
         loadMails()
@@ -66,7 +68,7 @@ export function MailIndex() {
         <div className="general-container">
             <MailNavBar
                 unreadCount={unreadCount}
-                onAddMail={onAddMail} />
+                 toggleIsCompose={setIsCompose} />
             {!selectedMail && <MailList
                 handleSetFilter={handleSetFilter}
                 DeleteMail={DeleteMail}
@@ -79,6 +81,7 @@ export function MailIndex() {
             />}
             {selectedMail && <MailDetails
                 selectedMail={selectedMail} />}
+           {isCompose && <MailCompose onAddMail={onAddMail} toggleIsCompose={setIsCompose}/>}
         </div>
     )
 }

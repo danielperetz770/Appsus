@@ -5,22 +5,12 @@
     bottom: 0px;
     right: 0px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-input {
-    border: none;
-    text-decoration: underline;
-    height: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+background-color: white;
 }
 
 .mail-compose h2 {
     background-color: rgb(209, 234, 255);
-
-}
-
-textarea {
-    border: none;
+    
 }
 
 .btn.close {
@@ -32,7 +22,16 @@ textarea {
     background-color: rgb(209, 234, 255);
     width: 20px;
     height: 20px;
-    font-size: 16px;
+    font-size: 16px;    
+}
 
+input {
+    border: none;
+    text-decoration: underline;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+textarea {
+    border: none;
 }
