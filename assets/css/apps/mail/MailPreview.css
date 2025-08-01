@@ -1,26 +1,30 @@
-.delete {
+.mail-preview {
+    min-height: 100px;
+    
+}
+
+.mail-preview .delete {
     border: none;
     height: 40px;
 }
 
-li.flex.not-bold:hover button.delete {
-    color: inherit;
+.mail-preview:hover button {
+    background-color: inherit;
 }
 
-.delete-is-read {
-    opacity: 0;
-    margin-right: 0px;
-}
-
-li.flex:hover .delete-is-read {
+.mail-preview .delete-is-read {
     display: flex;
-    opacity: 1;
     align-items: center;
     gap: 15px;
+
+    margin-right: 0px;
+    opacity: 0;
 }
 
-li{
-    min-height: 100px;
+.mail-preview:hover .delete-is-read {
+    opacity: 1;
 }
 
-.delete {}
+.mail-preview p{
+
+}
