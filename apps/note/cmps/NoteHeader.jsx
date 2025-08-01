@@ -7,11 +7,13 @@ export function NoteHeader({ searchTerm, setSearchTerm, onReload }) {
             <div className="note-controls">
                 <input
                     type="text"
-                    placeholder="Search notes..."
+                    placeholder="Search notes... "
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
+
                 />
-                <button onClick={onReload}><img src="icon/keep-assets/asset 20.svg" alt="" className="header-load-icon" /></button>
+                <img src="icon/keep-assets/asset 8.svg" alt="" />
+                <button className="btn-header-load-icon" onClick={onReload}><img src="icon/keep-assets/asset 20.svg" alt="" /></button>
             </div>
         </header>
     )
