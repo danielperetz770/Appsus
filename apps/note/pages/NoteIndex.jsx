@@ -1,3 +1,96 @@
+// import { noteService } from '../../note/services/note.service.js'
+// import { NoteHeader } from '../cmps/NoteHeader.jsx'
+// import { NoteAdd } from '../cmps/NoteAdd.jsx'
+// import { NoteList } from '../cmps/NoteList.jsx'
+
+
+// const { useState, useEffect } = React
+
+
+// export function NoteIndex() {
+//     console.log('NoteIndex component rendered')
+
+//     const [notes, setNotes] = useState([])
+//     const [isLoading, setIsLoading] = useState(true)
+//     const [searchTerm, setSearchTerm] = useState('')
+
+//     useEffect(() => {
+//         console.log('useEffect started')
+//         loadNotes()
+//     }, [])
+
+//     function loadNotes() {
+//         setIsLoading(true)
+//         noteService
+//             .query()
+//             .then(notes => {
+//                 console.log('Loaded notes from service:', notes)
+//                 setNotes(notes)
+//             })
+//             .catch(err => console.error('Failed to load notes', err))
+//             .finally(() => setIsLoading(false))
+//     }
+
+//     function handleRemoveNote(noteId) {
+//         setNotes(prevNotes => prevNotes.filter(note => note.id !== noteId))
+//     }
+
+//     function handleUpdateNote(updatedNote) {
+//         setNotes(prevNotes => prevNotes.map(note => (note.id === updatedNote.id ? updatedNote : note)))
+//     }
+
+//     const filteredNotes = notes.filter(note =>
+//         note.info && note.info.title && note.info.title.toLowerCase().includes(searchTerm.toLowerCase())
+//     )
+
+//     function onAddNote(newNote) {
+//         noteService
+//             .save(newNote)
+//             .then(savedNote => {
+//                 setNotes(prevNotes => [savedNote, ...prevNotes])
+//             })
+//             .catch(err => console.error('Failed to add note', err))
+//     }
+
+
+
+//     return (
+//         <div className="note-index grid">
+
+//             <section className="note-header-container">
+//                 <NoteHeader
+//                     searchTerm={searchTerm}
+//                     setSearchTerm={setSearchTerm}
+//                     onReload={loadNotes}
+//                 />
+//             </section>
+
+//             <section className="note-add-container">
+//                 <NoteAdd onAddNote={onAddNote} />
+//             </section>
+
+//             <section className="note-list-container">
+//                 {isLoading ? (
+//                     <div className="loading">
+//                         <span className="material-symbols-outlined spin">autorenew</span>
+//                     </div>
+//                 ) : !filteredNotes.length ? (
+//                     <div className="no-notes">No notes to show</div>
+//                 ) : (
+//                     <NoteList
+//                         notes={filteredNotes}
+//                         onRemove={handleRemoveNote}
+//                         onUpdateNote={handleUpdateNote}
+//                     />
+//                 )}
+//             </section>
+
+//         </div>
+//     )
+
+// }
+
+
 import { noteService } from '../../note/services/note.service.js'
 import { NoteHeader } from '../cmps/NoteHeader.jsx'
 import { NoteAdd } from '../cmps/NoteAdd.jsx'
@@ -12,7 +105,7 @@ export function NoteIndex() {
 
     const [notes, setNotes] = useState([])
     const [isLoading, setIsLoading] = useState(true)
-    const [searchTerm, setSearchTerm] = useState('')
+    const [filterBy, setFilterBy] = useState(noteService.getDefaultFilter())
 
     useEffect(() => {
         console.log('useEffect started')
@@ -39,9 +132,10 @@ export function NoteIndex() {
         setNotes(prevNotes => prevNotes.map(note => (note.id === updatedNote.id ? updatedNote : note)))
     }
 
-    const filteredNotes = notes.filter(note =>
-        note.info && note.info.title && note.info.title.toLowerCase().includes(searchTerm.toLowerCase())
-    )
+    function handleSetFilter(newFilterBy) {
+        setFilterBy(newFilterBy)
+    }
+
 
     function onAddNote(newNote) {
         noteService
@@ -55,13 +149,14 @@ export function NoteIndex() {
 
 
     return (
+
         <div className="note-index grid">
 
             <section className="note-header-container">
                 <NoteHeader
-                    searchTerm={searchTerm}
-                    setSearchTerm={setSearchTerm}
                     onReload={loadNotes}
+                    OnFilterBy={handleSetFilter}
+
                 />
             </section>
 
@@ -74,13 +169,16 @@ export function NoteIndex() {
                     <div className="loading">
                         <span className="material-symbols-outlined spin">autorenew</span>
                     </div>
-                ) : !filteredNotes.length ? (
+
+                ) : !notes ? (
                     <div className="no-notes">No notes to show</div>
                 ) : (
+
                     <NoteList
-                        notes={filteredNotes}
+                        notes={notes}
                         onRemove={handleRemoveNote}
                         onUpdateNote={handleUpdateNote}
+                        OnFilterBy={handleSetFilter}
                     />
                 )}
             </section>

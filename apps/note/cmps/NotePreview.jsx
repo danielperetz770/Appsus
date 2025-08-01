@@ -1,6 +1,6 @@
 import { ColorInput } from './ColorInput.jsx'
 
-export function NotePreview({ note, onRemove, onUpdateNote, }) {
+export function NotePreview({ note, onRemove, onUpdateNote, OnFilterBy }) {
 
   function toggleTodoDone(idx) {
     const newTodos = note.info.todos.map((todo, i) => {
@@ -39,7 +39,7 @@ export function NotePreview({ note, onRemove, onUpdateNote, }) {
                 <input
                   type="checkbox"
                   checked={!!todo.doneAt}
-                  onChange={() => toggleTodoDone(idx)}
+                  onChange={() => OnFilterBy(input.value)}
                 />
                 {todo.txt}
               </label>
