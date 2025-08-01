@@ -1,6 +1,7 @@
 .mail-preview {
+    display: flex;
     min-height: 100px;
-    
+
 }
 
 .mail-preview .delete {
@@ -27,6 +28,7 @@
 
 
 
-.mail-preview p{
-
+.mail-preview .time-preview {
+    margin-right: 0px;
 }
+

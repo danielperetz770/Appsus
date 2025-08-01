@@ -66,9 +66,9 @@ export function MailIndex() {
     if (!mails || !mails.length) return <div className="loader">loading...</div>
     return (
         <div className="mail-index">
-            <MailNavBar
+            {/* <MailNavBar
                 unreadCount={unreadCount}
-                 toggleIsCompose={setIsCompose} />
+                 toggleIsCompose={setIsCompose} /> */}
             {!selectedMail && <MailList
                 handleSetFilter={handleSetFilter}
                 DeleteMail={DeleteMail}

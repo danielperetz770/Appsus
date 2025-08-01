@@ -23,7 +23,7 @@ export function MailPreview({ mail, onSetSelectedMail, selectedMail, DeleteMail,
                 onClick={() => onSetSelectedMail(mail)}>
                 <p>{mail.subject}</p>
                 <p>{mail.body}</p>
-                <p>{new Date(mail.sentAt).toLocaleDateString()}</p>
+                <p className="time-preview">{new Date(mail.sentAt).toLocaleDateString()}</p>
                 <div className="delete-is-read">
                     <button className="read" onClick={toggleReadUnRead}>
                         {mail.isRead ? <img src="assets/pics/isRead.svg" /> : <img src="assets/pics/unRead.svg" />}

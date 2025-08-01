@@ -2,18 +2,17 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     /* font-family: var(); */
 }
 
-
-
 body {
     background-color: #f8fafd;
-    margin: 0;
-    padding: 0;
+
     height: 100vh;
 }
 
