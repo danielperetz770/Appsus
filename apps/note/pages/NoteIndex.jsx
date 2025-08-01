@@ -154,9 +154,9 @@ export function NoteIndex() {
 
             <section className="note-header-container">
                 <NoteHeader
-                    onReload={loadNotes}
+                    filterBy={filterBy}
                     OnFilterBy={handleSetFilter}
-
+                    onReload={loadNotes}
                 />
             </section>
 
