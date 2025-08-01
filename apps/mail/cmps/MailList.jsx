@@ -18,13 +18,9 @@ export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail,
 
     return (
         <React.Fragment>
-            <div className="header flex space-between align-center">
-                <div className="search-bar">
+            <div className="header">
                     <img className="google-pic" src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x_rtl_r5.png"></img>
-                </div>
-                <div className="picture">
                     <input className="search-input" type="text" placeholder="Search in Gmail" onChange={onInputChange} />
-                </div>
             </div>
             {/* {!selectedMail && <MailFilter/>} */}
             <ul className="mail-list">

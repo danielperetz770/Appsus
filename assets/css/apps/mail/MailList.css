@@ -1,9 +1,12 @@
  /* mail list */
 
-.mail-list{
-background-color: #fff;
-  border-radius: 30px;
-}
+ .mail-list {
+  /* display: flex; */
+  /* flex-direction: column; */
+   background-color: #fff;
+   border-radius: 20px;
+   margin-top: 77px;
+ }
 
  .google-pic {
    height: auto;
@@ -28,4 +31,10 @@ background-color: #fff;
    width: 100px;
  }
 
+ .mail-preview .mail-preview{
+    width: inherit;
+}
 
+.mail-list .sort-wrapper{
+
+}
