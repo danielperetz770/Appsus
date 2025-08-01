@@ -108,34 +108,34 @@ function _createDemoNotes() {
             }
         },
         {
-            id: 'n203',
-            createdAt: now + 3,
-            type: 'NoteTodos',
-            isPinned: false,
-            info: {
-                title: 'Weekend checklist',
-                todos: [
-                    { txt: 'Clean the house', doneAt: null },
-                    { txt: 'Build portfolio', doneAt: 1651234567890 }
-                ]
-            }
-        },
-        {
-            id: 'n203',
-            createdAt: now + 3,
-            type: 'NoteTodos',
-            isPinned: false,
-            info: {
-                title: 'Weekend checklist',
-                todos: [
-                    { txt: 'Clean the house', doneAt: null },
-                    { txt: 'Build portfolio', doneAt: 1651234567890 }
-                ]
-            }
-        },
-        {
             id: 'n204',
             createdAt: now + 4,
+            type: 'NoteTodos',
+            isPinned: false,
+            info: {
+                title: 'Weekend checklist',
+                todos: [
+                    { txt: 'Clean the house', doneAt: null },
+                    { txt: 'Build portfolio', doneAt: 1651234567890 }
+                ]
+            }
+        },
+        {
+            id: 'n205',
+            createdAt: now + 5,
+            type: 'NoteTodos',
+            isPinned: false,
+            info: {
+                title: 'Weekend checklist',
+                todos: [
+                    { txt: 'Clean the house', doneAt: null },
+                    { txt: 'Build portfolio', doneAt: 1651234567890 }
+                ]
+            }
+        },
+        {
+            id: 'n206',
+            createdAt: now + 6,
             type: 'NoteImg',
             isPinned: true,
             info: {
@@ -145,8 +145,8 @@ function _createDemoNotes() {
             style: { backgroundColor: '#e9c46a' }
         },
         {
-            id: 'n205',
-            createdAt: now + 5,
+            id: 'n207',
+            createdAt: now + 7,
             type: 'NoteTodos',
             isPinned: false,
             info: {

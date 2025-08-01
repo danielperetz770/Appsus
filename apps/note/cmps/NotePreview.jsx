@@ -57,4 +57,3 @@ export function NotePreview({ note, onUpdateNote }) {
     </section>
   )
 }
-
