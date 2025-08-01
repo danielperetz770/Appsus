@@ -19,7 +19,7 @@ export function MailPreview({ mail, onSetSelectedMail, selectedMail, DeleteMail,
     return (
         <React.Fragment>
             <li
-                className={`flex align-center ${mail.isRead ? "not-bold" : "bold"}`}
+                className={`flex align-center space-between ${mail.isRead ? "not-bold" : "bold"}`}
                 onClick={() => onSetSelectedMail(mail)}>
                 <p>{mail.subject}</p>
                 <p>{mail.body}</p>
