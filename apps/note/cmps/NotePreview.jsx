@@ -48,6 +48,8 @@ export function NotePreview({ note, onRemove, onUpdateNote, }) {
         </ul>
       )}
 
+      {note.type === 'NoteTxt' && <p>{note.info.txt}</p>}
+      {note.type === 'NoteImg' && <img src={note.info.url} alt={note.info.title} />}
       <ColorInput
         onSetColorStyle={handleSetColor}
         backgroundColor={note.style && note.style.backgroundColor}
@@ -55,8 +57,6 @@ export function NotePreview({ note, onRemove, onUpdateNote, }) {
       <button onClick={() => onRemove(note.id)} className="btn-remove">
         <img src="icon/keep-assets/asset 18.svg" alt="" />
       </button>
-      {note.type === 'NoteTxt' && <p>{note.info.txt}</p>}
-      {note.type === 'NoteImg' && <img src={note.info.url} alt={note.info.title} />}
     </section>
   )
 }
