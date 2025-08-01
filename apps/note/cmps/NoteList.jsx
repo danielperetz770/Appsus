@@ -5,10 +5,7 @@ export function NoteList({ notes, onRemove, onUpdateNote }) {
         <section className="notes-list grid">
             {notes.map(note => (
                 <article key={note.id} >
-                    <NotePreview note={note} onUpdateNote={onUpdateNote} />
-                    <button onClick={() => onRemove(note.id)} className="btn-remove">
-                        <img src="icon/keep-assets/asset 18.svg" alt="" />
-                    </button>
+                    <NotePreview note={note} onRemove={onRemove} onUpdateNote={onUpdateNote} />
                 </article>
             ))}
         </section>
