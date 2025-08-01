@@ -1,14 +1,8 @@
-body {
-    margin: 0;
-    padding: 0;
-}
 
-/* ul.mail-list {
-    grid-column: 2;
-} */
-
+/* this is MailNavBar.css */
 .side-header-container {
-    position: fixed;
+    position: absolute;
+    flex-direction: column;
     top: 0;
     left: 0;
     width: 220px;
@@ -19,6 +13,40 @@ body {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin-top: 76px;
+    /* margin-top: 76px; */
     z-index: 1;
 }
+
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    align-items: flex-start;
+    margin-left: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    gap: 20px;
+}
+
+.mail-count{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-mail {
+    cursor: pointer;
+}
+
+.Sent {
+    cursor: pointer;
+}
+
+.stared {
+    cursor: pointer;
+}
+
+.inbox {
+    cursor: pointer;
+}
+

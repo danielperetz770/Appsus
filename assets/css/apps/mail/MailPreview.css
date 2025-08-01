@@ -1,0 +1,26 @@
+.delete {
+    border: none;
+    height: 40px;
+}
+
+li.flex.not-bold:hover button.delete {
+    color: inherit;
+}
+
+.delete-is-read {
+    opacity: 0;
+    margin-right: 0px;
+}
+
+li.flex:hover .delete-is-read {
+    display: flex;
+    opacity: 1;
+    align-items: center;
+    gap: 15px;
+}
+
+li{
+    min-height: 100px;
+}
+
+.delete {}
