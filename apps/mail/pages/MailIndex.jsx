@@ -65,7 +65,7 @@ export function MailIndex() {
 
     if (!mails || !mails.length) return <div className="loader">loading...</div>
     return (
-        <div className="general-container">
+        <div className="mail-index">
             <MailNavBar
                 unreadCount={unreadCount}
                  toggleIsCompose={setIsCompose} />
