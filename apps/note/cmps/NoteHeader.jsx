@@ -1,5 +1,4 @@
 
-
 export function NoteHeader({ searchTerm, setSearchTerm, onReload }) {
     return (
         <header className="note-header">
