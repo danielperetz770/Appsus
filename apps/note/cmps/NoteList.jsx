@@ -7,9 +7,9 @@ export function NoteList({ notes, onRemove, onUpdateNote, onTogglePin }) {
 
     return (
         <div className="note-list-container">
+            <h2>Pinned Notes</h2>
             {pinnedNotes.length > 0 && (
                 <section className="notes-list grid">
-                    <h2>Pinned Notes</h2>
                     {pinnedNotes.map(note => (
                         <article key={note.id}>
                             <NotePreview
@@ -23,8 +23,8 @@ export function NoteList({ notes, onRemove, onUpdateNote, onTogglePin }) {
                 </section>
             )}
 
-            <section className="notes-list grid">
                 <h2> Notes</h2>
+            <section className="notes-list grid">
                 {unpinnedNotes.map(note => (
                     <article key={note.id}>
                         <NotePreview

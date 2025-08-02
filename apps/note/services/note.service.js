@@ -174,17 +174,6 @@ function _createDemoNotes() {
             style: { backgroundColor: '#09ff2a4b' }
         },
         {
-            id: 'n206',
-            createdAt: now + 6,
-            type: 'NoteImg',
-            isPinned: true,
-            info: {
-                url: 'https://picsum.photos/id/237/300/200',
-                title: 'Cute puppy'
-            },
-            style: { backgroundColor: '#e9c46a' }
-        },
-        {
             id: 'n207',
             createdAt: now + 7,
             type: 'NoteTodos',
@@ -196,7 +185,29 @@ function _createDemoNotes() {
                     { txt: 'Practice React', doneAt: null }
                 ]
             }
-        }
+        },
+        {
+            id: 'n210',
+            createdAt: now + 10,
+            type: 'NoteImg',
+            isPinned: true,
+            info: {
+                title: 'Study Plan',
+                url: 'https://media.istockphoto.com/id/498571761/photo/checklist-and-pen.webp?a=1&b=1&s=612x612&w=0&k=20&c=vDnEI2Nu24t6yGHIkiKq1oNePXc5DxBOyCN_UAhwkoY=',
+
+            }
+        },
+        {
+            id: 'n206',
+            createdAt: now + 6,
+            type: 'NoteImg',
+            isPinned: true,
+            info: {
+                url: 'https://picsum.photos/id/237/300/200',
+                title: 'Cute puppy'
+            },
+            style: { backgroundColor: '#e9c46a' }
+        },
     ]
 }
 
