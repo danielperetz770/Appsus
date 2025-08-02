@@ -86,26 +86,28 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 60 * 24 * 2 + 5000,
                 removedAt: null,
                 from: 'rot@company.com',
-                to: 'user@appsus.com'
+                to: 'user@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm102',
                 createdAt: Date.now() - 1000 * 60 * 60 * 36,
                 subject: 'System Maintenance Notice',
                 body: `Dear User,
-
+                
                 Please be informed that we will be performing scheduled system maintenance tonight from 11:00 PM to 3:00 AM.
-
+                
                 During this time, access to your dashboard and email may be limited.
                 We apologize for any inconvenience and thank you for your understanding.
-
+                
                 Sincerely,  
                 Tech Support`,
                 isRead: true,
                 sentAt: Date.now() - 1000 * 60 * 60 * 36 + 8000,
                 removedAt: null,
                 from: 'support@system.com',
-                to: 'user@appsus.com'
+                to: 'user@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm103',
@@ -122,7 +124,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 60 * 8 + 3000,
                 removedAt: null,
                 from: 'tom@company.com',
-                to: 'team@appsus.com'
+                to: 'team@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm104',
@@ -139,7 +142,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 60 * 24 + 7000,
                 removedAt: null,
                 from: 'james@consulting.io',
-                to: 'sarah@client.com'
+                to: 'sarah@client.com',
+                isStarred: false
             },
             {
                 id: 'm105',
@@ -156,7 +160,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 20 + 1000,
                 removedAt: null,
                 from: 'billing@hosting.co.il',
-                to: 'user@appsus.com'
+                to: 'user@appsus.com',
+                isStarred: false
             },
 
             {
@@ -174,7 +179,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 45 + 1200,
                 removedAt: null,
                 from: 'ventas@ofertas.com',
-                to: 'user@appsus.com'
+                to: 'user@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm107',
@@ -191,7 +197,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 60 * 4 + 800,
                 removedAt: null,
                 from: 'security@safeapp.com',
-                to: 'user@appsus.com'
+                to: 'user@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm108',
@@ -208,7 +215,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 60 * 24 * 3 + 2500,
                 removedAt: null,
                 from: 'team@codeverse.dev',
-                to: 'newuser@appsus.com'
+                to: 'newuser@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm109',
@@ -225,7 +233,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 90 + 1500,
                 removedAt: null,
                 from: 'billing@bizmail.co.il',
-                to: 'user@appsus.com'
+                to: 'user@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm110',
@@ -242,7 +251,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 60 * 12 + 3000,
                 removedAt: null,
                 from: 'noreply@airnow.com',
-                to: 'john.doe@appsus.com'
+                to: 'john.doe@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm111',
@@ -256,7 +266,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 20 + 500,
                 removedAt: null,
                 from: 'emma.friends@socialmail.com',
-                to: 'user@appsus.com'
+                to: 'user@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm112',
@@ -273,7 +284,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 60 * 72 + 1000,
                 removedAt: null,
                 from: 'conference@eventhub.co.il',
-                to: 'user@appsus.com'
+                to: 'user@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm113',
@@ -290,7 +302,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 15 + 1200,
                 removedAt: null,
                 from: 'prizes@luckywin.com',
-                to: 'user@appsus.com'
+                to: 'user@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm114',
@@ -307,7 +320,8 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 10 + 600,
                 removedAt: null,
                 from: 'orders@buynow.co.il',
-                to: 'user@appsus.com'
+                to: 'user@appsus.com',
+                isStarred: false
             },
             {
                 id: 'm115',
@@ -326,8 +340,126 @@ function _createMails() {
                 sentAt: Date.now() - 1000 * 60 * 60 * 6 + 1800,
                 removedAt: null,
                 from: 'newsletter@stackmail.com',
-                to: 'user@appsus.com'
+                to: 'user@appsus.com',
+                isStarred: false
+            },
+            {
+                id: 'm211',
+                subject: 'הצעת עבודה - משרת פיתוח React',
+                body: `שלום רב,
+
+                שמי דניאל ואני מגייס טכנולוגי בחברת StartTech. ראינו את קורות החיים שלך ומאוד התרשמנו מהניסיון שלך בפיתוח React ו־JavaScript.
+
+                ברצוננו להזמין אותך לתהליך גיוס לתפקיד Frontend Developer במשרה מלאה בתל אביב (אפשרות להיברידיות). מדובר בצוות קטן אך חזק, עם הרבה עצמאות ואחריות.
+
+                אנא עדכן אותנו אם אתה מעוניין, ונשמח לקבוע שיחת היכרות.
+
+                בברכה,
+                דניאל גולדמן
+                מנהלת גיוס
+                StartTech`,
+                isRead: false,
+                sentAt: 1752546000000,
+                createdAt: 1752542400000,
+                removedAt: null,
+                from: 'daniel@starttech.co.il',
+                to: 'user@appsus.com',
+                isStarred: true
+            },
+            {
+                id: 'm212',
+                subject: 'Important: Final Notice Before Account Suspension',
+                body: `Dear Customer,
+
+                We've noticed that your account balance is still unpaid. This is your final reminder before the account will be suspended.
+
+                To avoid any interruption in your services, please submit payment no later than August 5, 2025.
+
+                To pay your balance, visit: https://secure.paynow.com
+
+                If you've already made payment, please disregard this message.
+
+                Sincerely,  
+                Billing Department  
+                NetLine Services`,
+                isRead: true,
+                sentAt: 1752632400000,
+                createdAt: 1752628800000,
+                removedAt: null,
+                from: 'billing@netline.com',
+                to: 'user@appsus.com',
+                isStarred: false
+            },
+            {
+                id: 'm213',
+                subject: '¡Felicitaciones! Has sido seleccionado para una beca',
+                body: `Hola,
+
+                Nos complace informarte que has sido seleccionado como beneficiario de la beca de innovación tecnológica 2025.
+
+                Tu perfil ha destacado entre cientos de postulantes por tu dedicación y logros académicos. El siguiente paso es asistir a una entrevista virtual.
+
+                Te enviaremos un enlace para coordinar fecha y hora. ¡Enhorabuena!
+
+                Atentamente,  
+                Comité de Becas  
+                Universidad Innovar`,
+                isRead: false,
+                sentAt: 1752718800000,
+                createdAt: 1752715200000,
+                removedAt: null,
+                from: 'becas@innovar.edu',
+                to: 'user@appsus.com',
+                isStarred: true
+            },
+            {
+                id: 'm214',
+                subject: 'דו"ח חודשי - תוצאות ותובנות',
+                body: `שלום צוות,
+
+                מצורף הדו"ח החודשי הכולל תוצאות הקמפיינים, ניתוח התנהגות המשתמשים ותובנות עיקריות.
+
+                - אחוז ההמרה גדל ב־8% לעומת החודש הקודם.
+                - כמות ההרשמות ירדה ב־3% - נדרשת בדיקה של עמוד הנחיתה.
+                - הפלטפורמה המובילה: מובייל - 68%.
+
+                מומלץ לקיים ישיבת צוות להצגת הממצאים ודיון בפעולות להמשך.
+
+                בברכה,
+                נועה`,
+                isRead: false,
+                sentAt: 1752805200000,
+                createdAt: 1752801600000,
+                removedAt: null,
+                from: 'noa@marketing360.co.il',
+                to: 'user@appsus.com',
+                isStarred: false
+            },
+            {
+                id: 'm215',
+                subject: 'Your Order Has Been Delivered ✔',
+                body: `Hi Sarah,
+
+                We’re happy to let you know that your recent order (#457821) has been delivered.
+
+                **Order Details:**
+                - Bluetooth Earbuds x 1
+                - Wireless Charger x 1
+
+                We hope you enjoy your purchase! If you have any questions or concerns, feel free to contact our support team anytime.
+
+                Thank you for shopping with us,
+                – The TechEase Team`,
+                isRead: true,
+                sentAt: 1752891600000,
+                createdAt: 1752888000000,
+                removedAt: null,
+                from: 'support@techease.com',
+                to: 'sarah@client.com',
+                isStarred: false
             }
+
+
         ]
 
         utilService.saveToStorage(MAIL_KEY, mails)

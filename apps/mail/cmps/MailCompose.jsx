@@ -7,7 +7,7 @@ export function MailCompose({ toggleIsCompose, onAddMail }) {
     function addMailToList(ev) {
         ev.preventDefault()
         const newMail = {
-            id: utilService.makeId(),
+            id: '',
             to: ev.target.to.value,
             subject: ev.target.subject.value,
             body: ev.target.body.value,
@@ -16,6 +16,7 @@ export function MailCompose({ toggleIsCompose, onAddMail }) {
             isRead: false
         }
         onAddMail(newMail)
+        toggleIsCompose(false)
     }
 
     return (
@@ -27,7 +28,7 @@ export function MailCompose({ toggleIsCompose, onAddMail }) {
                 <input type="text" placeholder="Subject" name="subject" />
                 <hr></hr>
                 <textarea name="body" placeholder="Write your message..." rows="10" />
-                <hr></hr>
+                
 
                 <div className="form-actions flex space-between">
                     <button type="submit" className="btn send">Send</button>

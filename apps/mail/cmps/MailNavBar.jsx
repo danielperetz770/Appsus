@@ -25,10 +25,6 @@ export function MailNavBar({ toggleIsCompose, unreadCount }) {
                 </div>
                 <p className="stared">Stared</p>
                 <p className="sent">Sent</p>
-                {/* {isCompose && <MailCompose
-                    closeForm={closeForm}
-                    onAddMail={onAddMail}
-                />} */}
             </div>
         </div>
     )

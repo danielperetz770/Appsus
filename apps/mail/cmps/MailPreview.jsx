@@ -28,12 +28,15 @@ export function MailPreview({ mail, onSetSelectedMail, selectedMail, DeleteMail,
                 onClick={() => onSetSelectedMail(mail)}>
 
                 <div className="star-subject-wrapper">
-                    <button onClick={toggleStared}>
+                    <button
+                        onClick={toggleStared}
+                        className={mail.isStarred ? "starred" : ""}>
                         <img className="star" src="assets/pics/star.svg" />
                     </button>
+
                     <p className="mail-subject">{mail.subject}</p>
                 </div>
-                
+
                 <p className="mail-body">{mail.body}</p>
                 <p className="time-preview">{new Date(mail.sentAt).toLocaleDateString()}</p>
 
@@ -46,8 +49,6 @@ export function MailPreview({ mail, onSetSelectedMail, selectedMail, DeleteMail,
                     </button>
                 </div>
             </li>
-
-            {/* <hr className="seperator"></hr> */}
         </React.Fragment>
 
     )

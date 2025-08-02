@@ -7,6 +7,7 @@
    border-radius: 20px;
    margin-top: 55px;
    margin-inline-start: 220px;
+   cursor: pointer;
  }
 
  .google-pic {
@@ -38,6 +39,28 @@ margin-bottom: 50px;
 }
 
 .mail-list .sort-wrapper{
+  margin-left: 10px;
+  gap: 10px;
   display: flex;
+}
 
+.mail-list .mail-sort {
+  border: 1px solid lightsteelblue;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  background-color: #f9fbff;
+  color: #333;
+  appearance: none; 
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mail-list .mail-sort:focus {
+  outline: none;
+  border-color: #6a9fd8;
+  box-shadow: 0 0 0 3px rgba(106, 159, 216, 0.2);
 }
