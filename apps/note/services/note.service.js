@@ -150,15 +150,28 @@ function _createDemoNotes() {
             }
         },
         {
-            id: 'n206',
-            createdAt: now + 6,
+            id: 'n209',
+            createdAt: now + 9,
+            type: 'NoteTodos',
+            isPinned: true,
+            info: {
+                title: 'Weekend checklist',
+                todos: [
+                    { txt: 'Clean the house', doneAt: null },
+                    { txt: 'Build portfolio', doneAt: 1651234567890 }
+                ]
+            }
+        },
+        {
+            id: 'n208',
+            createdAt: now + 8,
             type: 'NoteImg',
             isPinned: true,
             info: {
-                url: 'https://picsum.photos/id/237/300/200',
+                url: 'https://plus.unsplash.com/premium_photo-1663926032043-7908766f5c52?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGFwcGxlfGVufDB8fDB8fHww',
                 title: 'Cute puppy'
             },
-            style: { backgroundColor: '#e9c46a' }
+            style: { backgroundColor: '#09ff2a4b' }
         },
         {
             id: 'n207',
@@ -172,7 +185,29 @@ function _createDemoNotes() {
                     { txt: 'Practice React', doneAt: null }
                 ]
             }
-        }
+        },
+        {
+            id: 'n210',
+            createdAt: now + 10,
+            type: 'NoteImg',
+            isPinned: true,
+            info: {
+                title: 'Study Plan',
+                url: 'https://media.istockphoto.com/id/498571761/photo/checklist-and-pen.webp?a=1&b=1&s=612x612&w=0&k=20&c=vDnEI2Nu24t6yGHIkiKq1oNePXc5DxBOyCN_UAhwkoY=',
+
+            }
+        },
+        {
+            id: 'n206',
+            createdAt: now + 6,
+            type: 'NoteImg',
+            isPinned: true,
+            info: {
+                url: 'https://picsum.photos/id/237/300/200',
+                title: 'Cute puppy'
+            },
+            style: { backgroundColor: '#e9c46a' }
+        },
     ]
 }
 

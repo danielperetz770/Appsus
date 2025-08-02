@@ -136,6 +136,13 @@ export function NoteIndex() {
         setFilterBy(newFilterBy)
     }
 
+    function handleTogglePin(noteId) {
+        setNotes(prevNotes =>
+            prevNotes.map(note =>
+                note.id === noteId ? { ...note, isPinned: !note.isPinned } : note
+            )
+        )
+    }
 
     function onAddNote(newNote) {
         noteService
@@ -179,6 +186,7 @@ export function NoteIndex() {
                         onRemove={handleRemoveNote}
                         onUpdateNote={handleUpdateNote}
                         OnFilterBy={handleSetFilter}
+                        onTogglePin={handleTogglePin}
                     />
                 )}
             </section>

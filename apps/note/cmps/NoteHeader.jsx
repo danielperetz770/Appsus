@@ -14,7 +14,7 @@ export function NoteHeader({ filterBy, OnFilterBy, onReload }) {
           value={filterBy.txt}
           onChange={handleChange}
         />
-        <img className="search-icon" src="icon/keep-assets/asset 8.svg" alt="" />
+        {/* <img className="search-icon" src="icon/keep-assets/asset 8.svg" alt="" /> */}
         <button className="btn-header-load-icon" onClick={onReload}>
           <img src="icon/keep-assets/asset 20.svg" alt="" />
         </button>
