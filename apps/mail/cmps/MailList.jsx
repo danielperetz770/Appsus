@@ -19,13 +19,20 @@ export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail,
     return (
         <React.Fragment>
             <div className="header">
-                    <img className="google-pic" src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x_rtl_r5.png"></img>
-                    <input className="search-input" type="text" placeholder="Search in Gmail" onChange={onInputChange} />
+                <div className="search-container">
+                    <img src="assets/pics/Search.svg" alt="Search icon" className="search-icon" />
+                    <input
+                        className="search-input"
+                        type="text"
+                        placeholder="Search in Gmail"
+                        onChange={onInputChange}
+                    />
+                </div>
             </div>
             {/* {!selectedMail && <MailFilter/>} */}
             <ul className="mail-list">
                 <div className="sort-wrapper">
-                    <img  src="assets/pics/sortPic.svg" alt="Sort icon" className="sort-icon" />
+                    <img src="assets/pics/sortPic.svg" alt="Sort icon" className="sort-icon" />
                     <select onChange={(ev) => onSortChange(ev)} className="mail-sort">
                         <option value="">sortBy</option>
                         <option value="subject">Subject</option>

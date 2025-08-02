@@ -1,7 +1,12 @@
-.mail-preview {
+/* .mail-preview {
     display: flex;
-    min-height: 100px;
+    min-height: 50px;
+    border-bottom: 0.8px solid lightsteelblue;
+    align-items: center; 
+}
 
+.mail-preview .mail-subject {
+margin-left: 15px;
 }
 
 .mail-preview .delete {
@@ -22,13 +27,144 @@
     opacity: 0;
 }
 
-.mail-preview:hover .delete-is-read {
-    opacity: 1;
+.mail-preview .delete-is-read .delete{
+    display: contents;
 }
 
 
+.mail-preview{
+    display: flex;
+    align-self: center;
+}
+
+.mail-preview .mail-body{
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+
+}
+
+.mail-preview:hover .delete-is-read {
+    opacity: 1;
+}
 
 .mail-preview .time-preview {
     margin-right: 0px;
 }
 
+.mail-preview button {
+    border: none;
+    background-color: inherit;
+    margin-inline-start: 15px;
+}
+
+.mail-preview button .star {
+    background-color: inherit;
+}
+
+.mail-preview .time-preview {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+} 
+ */
+
+
+
+
+
+
+ 
+ .mail-preview {
+  display: flex;
+  align-items: center; 
+  border-bottom: 0.8px solid lightsteelblue;
+  min-height: 50px;
+  padding: 8px 12px;
+  gap: 10px;
+  position: relative;
+}
+
+.mail-body{
+    display: flex;
+    align-items: center;
+}
+
+.star-subject-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0; 
+  }
+
+
+  .star-subject-wrapper button{
+    display: flex;
+  }
+
+
+
+
+.mail-preview button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.mail-preview button .star {
+  width: 20px; 
+  height: 20px;
+  background-color: inherit;
+  display: block;
+}
+
+.mail-subject {
+  margin: 0; 
+  /* font-weight: bold; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+.mail-body {
+  margin: 0;
+  color: gray;
+  flex-grow: 1; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 15px;
+  align-self: center; 
+}
+
+.time-preview {
+  margin-left: auto;
+  color: darkgray;
+  font-size: 0.85em;
+  align-self: center;
+}
+
+.delete-is-read {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-left: 15px;
+}
+
+.mail-preview:hover .delete-is-read {
+  opacity: 1;
+}
+
+.delete-is-read button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-is-read button img {
+  width: 20px;
+  height: 20px;
+}

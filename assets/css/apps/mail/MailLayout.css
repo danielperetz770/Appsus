@@ -50,3 +50,10 @@
     cursor: pointer;
 }
 
+.search-input{
+    text-align:left;
+    width: 500px;
+    border-radius: 20px;
+    margin-left: 225px;
+    margin-top: 50px;
+}

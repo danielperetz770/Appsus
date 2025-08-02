@@ -1,4 +1,56 @@
-.header {
+/* .header {
     position: absolute;
     top: 0px;
+} */
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    align-items: flex-start;
+    margin-left: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    gap: 20px
+}
+
+.mail-count {
+    display: flex;
+}
+
+.side-header-container {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.search-container {
+  position: relative;
+
+}
+
+.search-input {
+  width: 50em;
+  height: 3em;
+  padding: 10px 10px 10px 40px; /* מקום לאייקון בצד שמאל */
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
 }

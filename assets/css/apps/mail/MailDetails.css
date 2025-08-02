@@ -1,19 +1,1 @@
-.mail-details {
-    border: 2px solid black;
-    display: flex;
-    /* justify-content: space-bet; */
-}
 
-ul.mail-list{
-    /* margin-left: 220px; */
-}
-
-.read{
-    /* display: flex; */
-    align-items: center;
-    border:none ;
-    width: 20px;
-    background-color:rgb(245, 252, 255);
-    height: 50px;
-    margin: 0;;
-}

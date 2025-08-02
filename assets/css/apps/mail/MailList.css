@@ -6,12 +6,14 @@
    background-color: #fff;
    border-radius: 20px;
    margin-top: 77px;
+   margin-inline-start: 220px;
  }
 
  .google-pic {
    height: auto;
    cursor: pointer;
-   margin-left: 220px;
+   /* margin-left: 220px; */
+margin-bottom: 50px;
    width: 120px;
  }
 
@@ -36,5 +38,6 @@
 }
 
 .mail-list .sort-wrapper{
+  display: flex;
 
 }
