@@ -1,79 +1,3 @@
-/* .mail-preview {
-    display: flex;
-    min-height: 50px;
-    border-bottom: 0.8px solid lightsteelblue;
-    align-items: center; 
-}
-
-.mail-preview .mail-subject {
-margin-left: 15px;
-}
-
-.mail-preview .delete {
-    border: none;
-    height: 40px;
-}
-
-.mail-preview:hover button {
-    background-color: inherit;
-}
-
-.mail-preview .delete-is-read {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    margin-right: 0px;
-    opacity: 0;
-}
-
-.mail-preview .delete-is-read .delete{
-    display: contents;
-}
-
-
-.mail-preview{
-    display: flex;
-    align-self: center;
-}
-
-.mail-preview .mail-body{
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
-
-}
-
-.mail-preview:hover .delete-is-read {
-    opacity: 1;
-}
-
-.mail-preview .time-preview {
-    margin-right: 0px;
-}
-
-.mail-preview button {
-    border: none;
-    background-color: inherit;
-    margin-inline-start: 15px;
-}
-
-.mail-preview button .star {
-    background-color: inherit;
-}
-
-.mail-preview .time-preview {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-} 
- */
-
-
-
-
-
-
  
  .mail-preview {
   display: flex;
@@ -101,9 +25,6 @@ margin-left: 15px;
   .star-subject-wrapper button{
     display: flex;
   }
-
-
-
 
 .mail-preview button {
   border: none;
@@ -167,3 +88,4 @@ margin-left: 15px;
   width: 20px;
   height: 20px;
 }
+

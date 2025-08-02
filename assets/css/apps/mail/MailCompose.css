@@ -5,12 +5,12 @@
     bottom: 0px;
     right: 0px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-background-color: white;
+    background-color: white;
 }
 
 .mail-compose h2 {
     background-color: rgb(209, 234, 255);
-    
+
 }
 
 .btn.close {
@@ -22,7 +22,7 @@ background-color: white;
     background-color: rgb(209, 234, 255);
     width: 20px;
     height: 20px;
-    font-size: 16px;    
+    font-size: 16px;
 }
 
 input {
@@ -34,4 +34,22 @@ input {
 
 textarea {
     border: none;
+    height: 330px;
+}
+
+textarea:hover{
+border: 1px solid lightblue;
+transition: 1s;
+}
+
+
+.mail-compose .form-actions .btn.send {
+    border-radius: 20px;
+    margin: 0;
+    max-width: 120px;
+    min-width: 90px;
+    height: 36px;
+     background-color: #0b57d0;
+    color: aliceblue;
+    margin-top: 10px;
 }

@@ -34,7 +34,9 @@ export function MailIndex() {
     }, [sortBy])
 
     function onAddMail(newMail) {
-        setMails(prevMails => [newMail, ...prevMails])
+        mailService.save(newMail).then(savedMail => {
+            setMails(prevMails => [savedMail, ...prevMails]);
+        });
     }
 
     function onSetSelectedMail(mail) {
@@ -68,7 +70,7 @@ export function MailIndex() {
         <div className="mail-index">
             <MailNavBar
                 unreadCount={unreadCount}
-                 toggleIsCompose={setIsCompose} />
+                toggleIsCompose={setIsCompose} />
             {!selectedMail && <MailList
                 handleSetFilter={handleSetFilter}
                 DeleteMail={DeleteMail}
@@ -81,7 +83,7 @@ export function MailIndex() {
             />}
             {selectedMail && <MailDetails
                 selectedMail={selectedMail} />}
-           {isCompose && <MailCompose onAddMail={onAddMail} toggleIsCompose={setIsCompose}/>}
+            {isCompose && <MailCompose onAddMail={onAddMail} toggleIsCompose={setIsCompose} />}
         </div>
     )
 }
