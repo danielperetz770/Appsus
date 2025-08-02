@@ -119,17 +119,16 @@ margin-left: 15px;
 }
 
 .mail-subject {
-  margin: 0; 
-  /* font-weight: bold; */
+  margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 300px;
+  width: 400px; 
 }
 
 .mail-body {
   margin: 0;
-  color: gray;
+  color: rgb(0, 0, 0);
   flex-grow: 1; 
   white-space: nowrap;
   overflow: hidden;
@@ -140,7 +139,7 @@ margin-left: 15px;
 
 .time-preview {
   margin-left: auto;
-  color: darkgray;
+  color: rgb(0, 0, 0);
   font-size: 0.85em;
   align-self: center;
 }
