@@ -14,21 +14,6 @@ export const noteService = {
     getDefaultFilter
 }
 
-// function query(filterBy = {}) {
-//     return storageService.query(NOTE_KEY)
-//         .then(notes => {
-//             if (filterBy.txt) {
-//                 const regExp = new RegExp(filterBy.txt, 'i')
-//                 notes = notes.filter(note => regExp.test(note.title))
-//             }
-//             if (filterBy.minPrice) {
-//                 notes = notes.filter(note => note.info >= filterBy.title)
-
-//             }
-//             return notes
-//         })
-// }
-
 function query(filterBy = {}) {
     return storageService.query(NOTE_KEY)
         .then(notes => {

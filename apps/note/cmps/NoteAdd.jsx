@@ -53,11 +53,14 @@ export function NoteAdd({ onAddNote }) {
         setNoteType("NoteTxt")
     }
 
+    
+
     function handleKeyDown(ev) {
         if (ev.key === "Enter") {
             ev.preventDefault()
             handleSubmit(ev)
         }
+
     }
 
     return (
