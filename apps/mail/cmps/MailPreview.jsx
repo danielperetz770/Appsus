@@ -21,7 +21,6 @@ export function MailPreview({ mail, onSetSelectedMail, onToggleStar, DeleteMail,
         onToggleStar(mail)
     }
 
-
     return (
         <React.Fragment>
             <li
@@ -34,7 +33,7 @@ export function MailPreview({ mail, onSetSelectedMail, onToggleStar, DeleteMail,
                         className={mail.isStarred ? "starred" : ""}>
                         <img className="star" src="assets/pics/star.svg" />
                     </button>
-
+                    
                     <p className="mail-subject">{mail.subject}</p>
                 </div>
 

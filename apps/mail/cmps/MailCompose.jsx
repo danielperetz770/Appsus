@@ -1,7 +1,5 @@
 
-import { utilService } from "../../../services/util.service.js";
 export function MailCompose({ toggleIsCompose, onAddMail }) {
-
 
 
     function addMailToList(ev) {
@@ -23,11 +21,11 @@ export function MailCompose({ toggleIsCompose, onAddMail }) {
         <div className="mail-compose">
             <h2>New Message</h2>
             <form className="flex column gap" onSubmit={addMailToList}>
-                <input type="email" placeholder="To" name="to" required />
+                <input className="insert-mail" type="email" placeholder="To" name="to" required />
                 <hr></hr>
-                <input type="text" placeholder="Subject" name="subject" />
+                <input type="text" className="insert-mail" placeholder="Subject" name="subject" />
                 <hr></hr>
-                <textarea name="body" placeholder="Write your message..." rows="10" />
+                <textarea name="body" className="insert-mail" placeholder="Write your message..." rows="10" />
                 
 
                 <div className="form-actions flex space-between">

@@ -53,3 +53,7 @@ transition: 1s;
     color: aliceblue;
     margin-top: 10px;
 }
+
+.mail-compose .insert-mail{
+    padding: 10px;
+}

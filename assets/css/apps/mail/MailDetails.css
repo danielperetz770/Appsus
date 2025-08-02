@@ -1,26 +1,32 @@
-
-
-.mail-details{
+.mail-details {
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.mail-details .forward-answer-btn{
+.mail-details .forward-answer-btn {
     display: flex;
     gap: 20px;
 }
 
-.mail-details .forward-answer-btn .forward{
+.mail-details .forward-answer-btn .forward {
     height: 50px;
     width: 100px;
     border-radius: 18px;
 }
 
-.mail-details .forward-answer-btn .answer{
+.mail-details .forward-answer-btn .answer {
     height: 50px;
     width: 100px;
     border-radius: 18px;
 }
 
+.mail-details .forward {
+    border: none;
+    background-color: rgb(178, 178, 178);
+}
 
+.mail-details .answer {
+    border: none;
+    background-color: rgb(178, 178, 178);
+}
