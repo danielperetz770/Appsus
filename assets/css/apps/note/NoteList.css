@@ -27,6 +27,7 @@
 .note-list-container h2 {
   margin: 1rem 0 0.5rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .pin-btn {
@@ -39,41 +40,3 @@
 }
 
 
-
-
-
-/* .notes-list li:last-child {
-  border-bottom: none;
-}
-
-.notes-list button.close {
-  background: transparent;
-  border: none;
-  color: #c00;
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin-left: 15px;
-}
-
-.notes-list button.close:hover {
-  color: #900;
-}
-
-.note-nav button {
-  margin-left: 8px;
-  background: #007bff;
-  border: none;
-  color: white;
-  padding: 6px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.note-nav button i {
-  margin-right: 5px;
-}
-
-.note-nav button:hover {
-  background: #0056b3;
-} */
