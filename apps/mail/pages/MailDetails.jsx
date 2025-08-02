@@ -13,7 +13,12 @@ export function MailDetails({ selectedMail }) {
                         <p>{selectedMail.body}</p>
                         <span>{selectedMail.from}</span>
                         <span>{selectedMail.to}</span>
-                        <span>{new Date(selectedMail.sentAt).toLocaleString()}</span>                    </div>
+                        <span>sent :{new Date(selectedMail.sentAt).toLocaleString()}</span>
+                        <div className="forward-answer-btn">
+                            <button className="forward">Forward</button>
+                            <button className="answer">Answer</button>
+                        </div>
+                    </div>
                 </li>
             </section>
         </ul>

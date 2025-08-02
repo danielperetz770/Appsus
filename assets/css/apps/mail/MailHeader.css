@@ -4,25 +4,25 @@
 } */
 
 .inner-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 120px;
-    align-items: flex-start;
-    margin-left: 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    gap: 20px
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  align-items: flex-start;
+  margin-left: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  gap: 20px
 }
 
 .mail-count {
-    display: flex;
+  display: flex;
 }
 
 .side-header-container {
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .header {
@@ -39,7 +39,8 @@
 .search-input {
   width: 50em;
   height: 3em;
-  padding: 10px 10px 10px 40px; /* מקום לאייקון בצד שמאל */
+  padding: 10px 10px 10px 40px;
+  /* מקום לאייקון בצד שמאל */
   border-radius: 20px;
   border: 1px solid #ccc;
   font-size: 1em;
@@ -54,3 +55,8 @@
   height: 20px;
   pointer-events: none;
 }
+
+.sent {
+  cursor: pointer;
+}
+

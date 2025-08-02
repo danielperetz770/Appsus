@@ -1,91 +1,99 @@
- 
  .mail-preview {
-  display: flex;
-  align-items: center; 
-  border-bottom: 0.8px solid lightsteelblue;
-  min-height: 50px;
-  padding: 8px 12px;
-  gap: 10px;
-  position: relative;
-}
+   display: flex;
+   align-items: center;
+   border-bottom: 0.8px solid lightsteelblue;
+   min-height: 50px;
+   padding: 8px 12px;
+   gap: 10px;
+   position: relative;
+ }
 
-.mail-body{
-    display: flex;
-    align-items: center;
-}
+ .mail-body {
+   display: flex;
+   align-items: center;
+ }
 
-.star-subject-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0; 
-  }
+ .star-subject-wrapper {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   flex-shrink: 0;
+ }
 
 
-  .star-subject-wrapper button{
-    display: flex;
-  }
+ .star-subject-wrapper button {
+   display: flex;
+ }
 
-.mail-preview button {
-  border: none;
-  background-color: inherit;
-  cursor: pointer;
-}
+ .mail-preview button {
+   border: none;
+   background-color: inherit;
+   cursor: pointer;
+ }
 
-.mail-preview button .star {
-  width: 20px; 
-  height: 20px;
-  background-color: inherit;
-  display: block;
-}
+ .mail-preview button .star {
+   width: 20px;
+   height: 20px;
+   background-color: inherit;
+   display: block;
+ }
 
-.mail-subject {
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 400px; 
-}
+ .mail-subject {
+   margin: 0;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   width: 400px;
+ }
 
-.mail-body {
-  margin: 0;
-  color: rgb(0, 0, 0);
-  flex-grow: 1; 
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-left: 15px;
-  align-self: center; 
-}
+ .mail-body {
+   margin: 0;
+   color: rgb(0, 0, 0);
+   flex-grow: 1;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   margin-left: 15px;
+   align-self: center;
+ }
 
-.time-preview {
-  margin-left: auto;
-  color: rgb(0, 0, 0);
-  font-size: 0.85em;
-  align-self: center;
-}
+ .time-preview {
+   margin-left: auto;
+   color: rgb(0, 0, 0);
+   font-size: 0.85em;
+   align-self: center;
+ }
 
-.delete-is-read {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  margin-left: 15px;
-}
+ .delete-is-read {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   opacity: 0;
+   transition: opacity 0.3s ease;
+   margin-left: 15px;
+ }
 
-.mail-preview:hover .delete-is-read {
-  opacity: 1;
-}
+ .mail-preview:hover .delete-is-read {
+   opacity: 1;
+ }
 
-.delete-is-read button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+ .delete-is-read button {
+   background: none;
+   border: none;
+   cursor: pointer;
+ }
 
-.delete-is-read button img {
-  width: 20px;
-  height: 20px;
-}
+ .delete-is-read button img {
+   width: 20px;
+   height: 20px;
+ }
 
+ .star {
+   /* filter: grayscale(100%); */
+   cursor: pointer;
+   transition: filter 0.3s ease;
+ }
+
+ .starred .star {
+   filter: drop-shadow(0 0 4px gold);
+ }

@@ -3,7 +3,7 @@
 const { useState, useEffect } = React
 
 
-export function MailPreview({ mail, onSetSelectedMail, selectedMail, DeleteMail, setMails }) {
+export function MailPreview({ mail, onSetSelectedMail, onToggleStar, DeleteMail, setMails }) {
 
     function handleDeleteMail(ev) {
         ev.stopPropagation()
@@ -18,6 +18,7 @@ export function MailPreview({ mail, onSetSelectedMail, selectedMail, DeleteMail,
 
     function toggleStared(ev) {
         ev.stopPropagation()
+        onToggleStar(mail)
     }
 
 

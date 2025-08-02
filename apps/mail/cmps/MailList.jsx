@@ -1,11 +1,10 @@
 
 import { MailPreview } from "../../mail/cmps/MailPreview.jsx";
-import { MailFilter } from "./MailFilter.jsx";
 
 
 // import { MailIndex } from "../pages/MailIndex";
 export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail,
-    handleSetFilter, setMails, onSetSortBy, sortBy }) {
+    handleSetFilter, setMails, onSetSortBy, onToggleStar }) {
 
     function onInputChange(ev) {
         const txt = ev.target.value
@@ -29,7 +28,6 @@ export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail,
                     />
                 </div>
             </div>
-            {/* {!selectedMail && <MailFilter/>} */}
             <ul className="mail-list">
                 <div className="sort-wrapper">
                     <img src="assets/pics/sortPic.svg" alt="Sort icon" className="sort-icon" />
@@ -42,6 +40,7 @@ export function MailList({ mails, onSetSelectedMail, selectedMail, DeleteMail,
 
                 {mails.map(mail =>
                     <MailPreview
+                        onToggleStar={onToggleStar}
                         DeleteMail={DeleteMail}
                         key={mail.id}
                         mail={mail}

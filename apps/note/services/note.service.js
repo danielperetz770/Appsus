@@ -39,7 +39,6 @@ function query(filterBy = {}) {
                     return regExp.test(textToSearch)
                 })
             }
-            // אם יש לך שדות אחרים לסינון - תוסיף אותם כאן
             return notes
         })
 }
